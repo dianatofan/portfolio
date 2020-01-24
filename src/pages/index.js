@@ -6,7 +6,7 @@ import "../styles/index.scss"
 import "typeface-metropolis"
 
 export default () => (
-  <div>
+  <div className="img1">
     <Header />
     <Content />
     <Link to="/about/">About</Link>

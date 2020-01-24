@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <div className="content">
-      <Img fixed={data.imageOne.childImageSharp.fixed} />
+      {/*<Img fixed={data.imageOne.childImageSharp.fixed} />*/}
     </div>
   )
 }
