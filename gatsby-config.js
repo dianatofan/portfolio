@@ -17,6 +17,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `typeface-metropolis`,
+    `typeface-comfortaa`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
   ],
