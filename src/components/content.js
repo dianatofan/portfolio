@@ -3,6 +3,7 @@ import "../styles/header.scss";
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Heart } from "react-feather";
+import "../styles/content.scss";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -19,14 +20,12 @@ export default () => {
 
   return (
     <div className="content">
-      {/*<Img fixed={data.imageOne.childImageSharp.fixed} />*/}
        <h1 className="introText">
-        Hi, I'm Diana, a front-end developer living in Copenhagen.
+        Hi, I'm Diana, a front-end engineer working at Maersk, Copenhagen.
         <div>
-          I <Heart className="heartIcon" /> UX design and data visualization.
+          I <Heart className="heartIcon" /> creating beautiful designs and bringing them to life.
         </div>
-         <div>Currently working as a software engineer @Maersk</div>
-         <div>Scroll to explore</div>
+         <div className="subtitle">Scroll to explore</div>
       </h1>
     </div>
   )

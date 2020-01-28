@@ -20,6 +20,7 @@ export default () => {
   };
   return (
     <header className="header">
+      {/* <div className="logo">dt</div> */}
       <img src={logo} width={ICON_SIZE} height={ICON_SIZE} alt="Diana Tofan" />
       <ul className="navigation">
         <li><Link to="/">Home</Link></li>
