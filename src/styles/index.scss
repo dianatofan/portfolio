@@ -1,5 +1,5 @@
 body {
-  font-family: "Metropolis";
+  font-family: "Metropolis", sans-serif;
   color: #373737;
   margin: 0 6vw;
 }
@@ -10,6 +10,8 @@ body {
   height: 100vh;
 }
 
-h1 {
-  // font-family: "Abril Fat Face"
+a {
+ text-decoration: none;
+  cursor: pointer;
+  color: #ff2e63;
 }

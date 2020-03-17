@@ -1,4 +1,7 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import "../styles/card.scss";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -14,15 +17,19 @@ export default () => {
 `);
 
 return (
-<div class="rectangle time-series">
-<div class="title">
-  Visual Exploration of Self-Tracking Data
-</div>
-<div class="description">
-  Research project exploring the visualization of time-oriented data
-</div>
-<div class="button" onclick="redirect('timeSeries')">See more <i class="fas fa-arrow-right"></i></div>
-<img src="img/img.png" alt="time series" />
-</div>
-)
+  <div className="rectangle time-series">
+    <div className="title">
+      Visual Exploration of Self-Tracking Data
+    </div>
+    <div className="description">
+      Research project exploring the visualization of time-oriented data
+    </div>
+    <div className="button" onClick="redirect('timeSeries')">
+      See more <i className="fas fa-arrow-right"/>
+    </div>
+    <div className="img">
+      <Img fixed={data.imageOne.childImageSharp.fixed}/>
+    </div>
+  </div>
+  )
 }

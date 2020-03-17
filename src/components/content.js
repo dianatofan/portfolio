@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/header.scss";
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Heart } from "react-feather";
 import "../styles/content.scss";
+import Card from "./card";
+import mouse from "../../static/svg/mouse.svg";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -16,17 +17,16 @@ export default () => {
       }
     }
   }
-`)
+`);
 
   return (
     <div className="content">
        <h1 className="introText">
-        Hi, I'm Diana, a front-end engineer working at Maersk, Copenhagen.
-        <div>
-          I <Heart className="heartIcon" /> creating beautiful designs and bringing them to life.
-        </div>
-         <div className="subtitle">Scroll to explore</div>
+         Hey! I'm Diana, a front-end engineer at <a href="https://www.maersk.com" target="_blank">Maersk</a> Copenhagen.
+         I love creating purposeful, human-centric experiences and bringing them to life.
+         <div className="subtitle">Former student developer at <a href="https://www.triggerz.com/" target="_blank">Triggerz</a></div>
       </h1>
+      {/*<Card />*/}
     </div>
   )
 }

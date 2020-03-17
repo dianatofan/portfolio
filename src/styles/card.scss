@@ -1,0 +1,70 @@
+.rectangle {
+  width: calc(49% - 90px);
+  height: 440px;
+  padding: 40px;
+}
+
+.rectangle .img {
+  width: 85%;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  position: relative;
+}
+
+.rectangle .title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5151b1;
+}
+
+.rectangle .description,
+.rectangle .button {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.rectangle.time-series {
+  background: #f3f3fd;
+  border: dotted 3px #e3e3f7;
+}
+
+.rectangle.parallel-coordinates {
+  background: #daf3db;
+}
+
+.rectangle.geomapping {
+  background: #F7F6C4;
+}
+
+.rectangle.ted-talks {
+  background: #f1def7;
+}
+
+.rectangle .button {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.rectangle .button:hover {
+  font-weight: 700;
+}
+
+.rectangle.time-series,
+.rectangle.geomapping {
+  margin: 10px 10px 10px 0;
+}
+
+.rectangle.parallel-coordinates,
+.rectangle.ted-talks {
+  margin: 10px 0 10px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .rectangle {
+    /*height: calc(450px + 1vh);*/
+    width: 100%;
+  }
+}

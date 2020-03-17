@@ -6,11 +6,11 @@ import facebookIcon from "../../static/svg/facebook.svg";
 import hoverIcon from "../../static/svg/facebookDefault.svg";
 import githubIcon from "../../static/svg/github.svg";
 import emailIcon from "../../static/svg/email.svg";
-import logo from "../../static/svg/logoDiana.svg";
+import logo from "../../static/svg/logoLight.svg";
 import { Menu, X } from "react-feather"
 import { Link } from "gatsby"
 
-const ICON_SIZE = 50;
+const ICON_SIZE = 40;
 
 export default () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -20,7 +20,6 @@ export default () => {
   };
   return (
     <header className="header">
-      {/* <div className="logo">dt</div> */}
       <img src={logo} width={ICON_SIZE} height={ICON_SIZE} alt="Diana Tofan" />
       <ul className="navigation">
         <li><Link to="/">Home</Link></li>

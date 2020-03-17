@@ -1,5 +1,6 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
+$text-color: #223458;
 
 .header {
   color: $primary-color;
@@ -8,13 +9,14 @@ $primary-color: #333;
  }
 
  .header .logo {
-  font-family: "Comfortaa";
+   font-family: "Comfortaa", sans-serif;
   font-size: 3rem;
   font-weight: 900;
   background: -webkit-linear-gradient(#b32673, #856cf3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(2px 0 #b32673);
+   height: 50px;
 }
 
 .heartIcon {
@@ -26,7 +28,9 @@ $primary-color: #333;
   background: #fff;
   display: inline-block;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  color: $text-color;
+  width: 75%;
 }
 
 .navLink {
@@ -48,13 +52,18 @@ $primary-color: #333;
   list-style-type: none;
   position: absolute;
   right: 5rem;
+  > li a {
+    color: $text-color;
+    text-decoration: none;
+    font-size: .8rem;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .hamburgerMenu {
     display: none;
   }
-} 
+}
 
 .hamburgerMenu, .crossIcon {
   cursor: pointer;
@@ -69,7 +78,3 @@ $primary-color: #333;
   font-weight: bold;
 }
 
-.navigation > li a {
-  color: $primary-color;
-  text-decoration: none;
-}
