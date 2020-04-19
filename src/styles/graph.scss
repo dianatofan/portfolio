@@ -1,0 +1,11 @@
+@import "colors";
+
+.square {
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+
+.row {
+  display: flex;
+}

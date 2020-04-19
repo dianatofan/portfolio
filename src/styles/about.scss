@@ -1,0 +1,31 @@
+@import "colors";
+
+.columns {
+  display: flex;
+}
+
+.about-me-text {
+  margin-left: 2rem;
+  color: $text-color;
+  text-align: left;
+  font-size: 1rem;
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    margin: 1rem 0;
+  }
+}
+
+.spark-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 10px;
+  margin-left: 4px;
+  svg {
+    fill: $text-color;
+  }
+}

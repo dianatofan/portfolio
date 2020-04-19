@@ -18,13 +18,17 @@ export default () => {
   const openHamburgerMenu = val => {
     setMenuOpen(!!val);
   };
+
+  const activePage = `/${window.location.href.split("/").slice(-1)}`;
+
   return (
     <header className="header">
-      <img src={logo} width={ICON_SIZE} height={ICON_SIZE} alt="Diana Tofan" />
+      <div className="logo">lD</div>
+      {/*<img src={logo} width={ICON_SIZE} height={ICON_SIZE} alt="Diana Tofan" />*/}
       <ul className="navigation">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">Projects</Link></li>
-        <li><Link to="/">Contact</Link></li>
+        <li className={activePage === "/" ? "active" : ""}><Link to="/">Home</Link></li>
+        <li className={activePage === "/about" ? "active" : ""}><Link to="/about">About</Link></li>
+        <li className={activePage === "/contact" ? "active" : ""}><Link to="/">Contact</Link></li>
       </ul>
       {
         isMenuOpen ? <X size={35} className="crossIcon" onClick={() => openHamburgerMenu()} /> : <Menu size={35} className="hamburgerMenu" onClick={() => openHamburgerMenu(true)} />

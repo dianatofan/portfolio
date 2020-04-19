@@ -1,3 +1,5 @@
+@import "colors";
+
 body {
   font-family: "Metropolis", sans-serif;
   color: #373737;
@@ -13,5 +15,5 @@ body {
 a {
  text-decoration: none;
   cursor: pointer;
-  color: #ff2e63;
+  color: $link-color-pink;
 }

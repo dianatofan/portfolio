@@ -5,6 +5,7 @@ import { Heart } from "react-feather";
 import "../styles/content.scss";
 import Card from "./card";
 import mouse from "../../static/svg/mouse.svg";
+import Graph from "./graph";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ export default () => {
          I love creating purposeful, human-centric experiences and bringing them to life.
          <div className="subtitle">Former student developer at <a href="https://www.triggerz.com/" target="_blank">Triggerz</a></div>
       </h1>
-      {/*<Card />*/}
+      <Graph/>
     </div>
   )
 }

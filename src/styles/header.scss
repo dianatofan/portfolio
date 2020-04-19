@@ -1,23 +1,19 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
-$text-color: #223458;
+@import "colors";
 
 .header {
   color: $primary-color;
   display: flex;
   padding: 2.5rem 0;
- }
 
- .header .logo {
-   font-family: "Comfortaa", sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  background: -webkit-linear-gradient(#b32673, #856cf3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(2px 0 #b32673);
-   height: 50px;
-}
+  .logo {
+    font-size: 2.6rem;
+    letter-spacing: -5px;
+    background: -webkit-linear-gradient(#1723B2, #722EC3, #C753D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+  }
+ }
 
 .heartIcon {
   position: relative;
@@ -56,6 +52,9 @@ $text-color: #223458;
     color: $text-color;
     text-decoration: none;
     font-size: .8rem;
+  }
+  > .active a {
+    color: $link-color-pink;
   }
 }
 

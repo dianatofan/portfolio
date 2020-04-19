@@ -1,3 +1,5 @@
+@import "colors";
+
 .footer {
   text-align: center;
   position: absolute;
@@ -7,6 +9,6 @@
   .text {
     font-weight: 600;
     font-size: .8rem;
-    color: #223458;
+    color: $text-color;
   }
 }
