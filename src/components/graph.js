@@ -4,11 +4,11 @@ import "../styles/graph.scss";
 export default () => {
   const colors = [
     "#C753D1",
-    "#C753D1",
+    "#a046a7",
     "#5d2962",
     "#722EC3",
-    "#1723B2",
     "#146dfb",
+    "#1723B2",
     "#223458"
   ];
 

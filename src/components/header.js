@@ -10,7 +10,7 @@ export default ({ location }) => {
     setMenuOpen(!!val);
   };
 
-  const activePage = location && location.href && `/${location.href.split("/").slice(-1)}`;
+  const activePage = (location && location.href) ? `/${location.href.split("/").slice(-1)}` : "/";
 
   return (
     <header className="header">
