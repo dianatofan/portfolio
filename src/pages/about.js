@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import "../styles/about.scss";
 import spark from "../../static/svg/spark.svg";
 
-export default () => {
+export default ({ location }) => {
   const data = useStaticQuery(graphql`
   query {
     image: file(relativePath: { eq: "framedPic.png" }) {
@@ -20,7 +20,7 @@ export default () => {
 
   return (
     <div>
-      <Header/>
+      <Header location={location} />
       <div className="columns">
         <Img fluid={data.image.childImageSharp.fluid} style={{ margin: "2rem 2rem 0 0",  maxHeight: "60vh", width: "20%", display: "inline-block" }}
              imgStyle={{ objectFit: "contain", width: "auto" }} />

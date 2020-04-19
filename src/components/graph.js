@@ -36,7 +36,7 @@ export default () => {
   };
 
   const WIDTH = 10;
-  const HEIGHT = 12;
+  const HEIGHT = 14;
 
   const arr = Array.from(Array(HEIGHT).keys());
 
