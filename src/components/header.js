@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/header.scss";
 import { Menu, X } from "react-feather";
 import { Link, navigate } from "gatsby";
+import logo from "../images/logoNew.svg";
 
 export default ({ location }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default ({ location }) => {
 
   return (
     <header className="header">
-      <div className="logo" onClick={() => navigate("/")}>lD</div>
+      <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
       <ul className="navigation">
         <li className={activePage === "/" ? "active" : ""}><Link to="/">Home</Link></li>
         <li className={activePage === "/about" ? "active" : ""}><Link to="/about">About</Link></li>
