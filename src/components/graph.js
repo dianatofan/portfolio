@@ -42,7 +42,7 @@ export default () => {
 
   return (
     <div>
-      {arr.map(() => createRow(WIDTH)) }
+      { arr.map(() => createRow(WIDTH)) }
     </div>
   )
 }

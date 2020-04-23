@@ -1,33 +1,49 @@
+@import "colors";
+
 .rectangle {
-  width: calc(49% - 90px);
-  height: 440px;
+  //width: calc(49% - 90px);
+  //height: 440px;
   padding: 40px;
+  color: black;
 }
 
 .rectangle .img {
-  width: 85%;
+  //width: 85%;
   height: auto;
   bottom: 0;
   right: 0;
   position: relative;
 }
 
+.rectangle {
+  display: flex;
+  align-items: center;
+}
+
 .rectangle .title {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #5151b1;
+  //color: #5151b1;
+}
+
+.rectangle .role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  //color: #bababa;
+  opacity: .3;
 }
 
 .rectangle .description,
 .rectangle .button {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  color: $text-color
 }
 
 .rectangle.time-series {
-  background: #f3f3fd;
-  border: dotted 3px #e3e3f7;
+  //background: #f3f3fd;
+  //border: dotted 3px #e3e3f7;
 }
 
 .rectangle.parallel-coordinates {
@@ -54,7 +70,7 @@
 
 .rectangle.time-series,
 .rectangle.geomapping {
-  margin: 10px 10px 10px 0;
+  //margin: 10px 10px 10px 0;
 }
 
 .rectangle.parallel-coordinates,
@@ -67,4 +83,13 @@
     /*height: calc(450px + 1vh);*/
     width: 100%;
   }
+}
+
+.right-column.image {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.right-column.image:hover {
+  transform: scale(1.05);
 }
