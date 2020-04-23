@@ -30,8 +30,8 @@
 .rectangle .role {
   font-size: 0.8rem;
   font-weight: 600;
-  //color: #bababa;
-  opacity: .3;
+  color: $text-color;
+  opacity: .5;
 }
 
 .rectangle .description,
@@ -91,5 +91,6 @@
 }
 
 .right-column.image:hover {
+  background:white;
   transform: scale(1.05);
 }

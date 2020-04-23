@@ -1,12 +1,12 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, navigate } from "gatsby";
 import Img from "gatsby-image";
 import "../styles/card.scss";
 
 export default () => {
   const data = useStaticQuery(graphql`
   query {
-    imageOne: file(relativePath: { eq: "timeSeries.png" }) {
+    imageOne: file(relativePath: { eq: "timeSeriesIpad.png" }) {
       childImageSharp {
         fixed(width: 550, height: 400, quality: 100) {
           ...GatsbyImageSharpFixed
@@ -28,14 +28,14 @@ return (
         Built in React, Redux & D3.js
       </div>
       <div className="role">
-        UX RESEARCHER | UX DESIGNER | SOFTWARE DEVELOPER
+        SOFTWARE DEVELOPER | UX RESEARCHER
       </div>
       <div className="button" onClick="redirect('timeSeries')">
         See more <i className="fas fa-arrow-right"/>
       </div>
     </div>
-    <div className="right-column image">
-      <Img fixed={data.imageOne.childImageSharp.fixed}/>
+    <div className="right-column image"  onClick={() => navigate("/time-series")} >
+      <Img fixed={data.imageOne.childImageSharp.fixed} />
     </div>
   </div>
   )
