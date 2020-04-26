@@ -24,14 +24,11 @@ return (
         {/*Visual Exploration of Self-Tracking Data*/}
       </div>
       <div className="description">
-        Web application that generates charts based on input data
+        Data visualization tool that facilitates the doctor-patient communication for improving the patient's wellbeing.
         Built in React, Redux & D3.js
       </div>
       <div className="role">
         SOFTWARE DEVELOPER | UX RESEARCHER
-      </div>
-      <div className="button" onClick="redirect('timeSeries')">
-        See more <i className="fas fa-arrow-right"/>
       </div>
     </div>
     <div className="right-column image"  onClick={() => navigate("/time-series")} >

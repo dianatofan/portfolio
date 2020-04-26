@@ -4,6 +4,7 @@ import {graphql, useStaticQuery} from "gatsby";
 import Img from "gatsby-image";
 import "../styles/about.scss";
 import spark from "../../static/svg/spark.svg";
+import photo from "../images/framedPic.png";
 
 export default ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -22,8 +23,8 @@ export default ({ location }) => {
     <div>
       <Header location={location} />
       <div className="columns">
-        <Img fluid={data.image.childImageSharp.fluid} style={{ margin: "2rem 2rem 0 0",  maxHeight: "60vh", width: "20%", display: "inline-block" }}
-             imgStyle={{ objectFit: "contain", width: "auto" }} />
+        <Img fluid={data.image.childImageSharp.fluid} style={{ margin: "2rem 2rem 0 0", height: "100%", width: "20%", display: "inline-block" }} />
+        {/*<img src={photo} alt="" style={{ margin: "2rem 2rem 0 0", height: "100%", width: "250px", display: "inline-block" }} />*/}
         <section className="about-me-text">
           <h1>_about</h1>
           <div>Hi! I'm Diana Tofan, a Romanian front-end developer living in Copenhagen. I have a BSc degree in Computer Science and Master's in Digital Media Engineering.</div>
