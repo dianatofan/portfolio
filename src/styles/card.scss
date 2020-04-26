@@ -143,3 +143,14 @@ blockquote {
 .quote-section {
   padding: 2rem 0;
 }
+
+.user-types {
+  margin: 2rem 0;
+  text-align: center;
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-row: auto;
+  grid-column-gap: 80px;
+  grid-row-gap: 20px;
+}
