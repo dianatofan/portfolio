@@ -4,6 +4,7 @@ import { graphql, navigate, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import "../styles/about.scss";
 import spark from "../../static/svg/spark.svg";
+import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
 
 export default ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +23,8 @@ export default ({ location }) => {
     <div>
       <Header location={location} />
       <div className="full-screen-header">
-        <Img fluid={data.imageOne.childImageSharp.fluid} style={{ maxHeight: "60vh", width: "100%", display: "inline-block" }} />
+        <img src={timeSeriesHeader} alt="" style={{ maxHeight: "60vh", width: "100%", display: "inline-block" }} />
+        {/*<Img fluid={data.imageOne.childImageSharp.fluid} style={{ maxHeight: "60vh", width: "100%", display: "inline-block" }} />*/}
       </div>
       <section className="title-section">
         <h1>Visual Exploration of Time Series in Healthcare</h1>

@@ -1,7 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql, navigate } from "gatsby";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import "../styles/card.scss";
+import timeSeriesIpad from "../images/timeSeriesIpad.png";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,8 @@ return (
       </div>
     </div>
     <div className="right-column image"  onClick={() => navigate("/time-series")} >
-      <Img fixed={data.imageOne.childImageSharp.fixed} />
+      <img src={timeSeriesIpad} alt="" style={{ width: "550px", height: "400px" }} />
+      {/*<Img fixed={data.imageOne.childImageSharp.fixed} />*/}
     </div>
   </div>
   )
