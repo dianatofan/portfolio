@@ -50,7 +50,7 @@
 .navigation {
   list-style-type: none;
   position: absolute;
-  right: 5rem;
+  right: 6vw;
   > li a {
     color: $text-color;
     text-decoration: none;
@@ -70,7 +70,7 @@
 .hamburgerMenu, .crossIcon {
   cursor: pointer;
   position: absolute;
-  right: 6rem;
+  right: 6vw;
 }
 
 .navigation > li {

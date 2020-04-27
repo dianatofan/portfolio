@@ -88,8 +88,9 @@
 }
 
 .title-section {
-  margin: 2rem 6vw;
+  margin: 2rem 12vw;
   h1 {
+    margin-right: 40px;
     font-size: 2rem;
     width: 35%;
   }
@@ -117,13 +118,14 @@
   align-items: center;
   h1 {
     font-size: 2rem;
+    margin: 0 6vw 0 12vw;
   }
   > * {
-    margin: 0 6vw;
     padding: 2rem 0;
   }
   > div {
     padding-right: 4rem;
+    margin: 0 12vw 0 6vw;
   }
 }
 
@@ -141,6 +143,8 @@ blockquote {
 }
 
 .quote-section {
+  background: $eggplant;
+  color: $white;
   padding: 2rem 0;
 }
 
@@ -153,4 +157,9 @@ blockquote {
   grid-row: auto;
   grid-column-gap: 80px;
   grid-row-gap: 20px;
+}
+
+.max-length {
+  overflow: auto;
+  max-width: 75ch;
 }

@@ -14,7 +14,7 @@ export default ({ location }) => {
   const activePage = (location && location.href) ? `/${location.href.split("/").slice(-1)}` : "/";
 
   return (
-    <header className="header sticky">
+    <header className="header sticky" id="header">
       <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
       <ul className="navigation">
         <li className={activePage === "/" ? "active" : ""}><Link to="/">Home</Link></li>
