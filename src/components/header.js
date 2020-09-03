@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "../styles/header.scss";
-import { Menu, X } from "react-feather";
+import { Menu as MenuIcon, X } from "react-feather";
 import { Link, navigate } from "gatsby";
 import logo from "../images/logoNew.svg";
+import { Burger } from './header/hamburger';
+import { Menu } from './header/menu';
 
 export default ({ location }) => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const openHamburgerMenu = val => {
-    setMenuOpen(!!val);
-  };
+  const [isOpen, setOpen] = useState(false);
 
   const activePage = (location && location.href) ? `/${location.href.split("/").slice(-1)}` : "/";
 
@@ -21,9 +19,10 @@ export default ({ location }) => {
         <li className={activePage === "/about" ? "active" : ""}><Link to="/about">About</Link></li>
         <li className={activePage === "/contact" ? "active" : ""}><Link to="/">Contact</Link></li>
       </ul>
-      {
-        isMenuOpen ? <X size={35} className="crossIcon" onClick={() => openHamburgerMenu()} /> : <Menu size={35} className="hamburgerMenu" onClick={() => openHamburgerMenu(true)} />
-      }
+      <div className="burgerMenuNavigation">
+        <Burger open={isOpen} setOpen={setOpen} />
+        <Menu open={isOpen} setOpen={setOpen} />
+      </div>
     </header>
   )
 }
