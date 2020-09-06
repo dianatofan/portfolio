@@ -14,6 +14,6 @@ export default ({ location }) => (
       <Content />
       <Footer />
     </div>
-    <Card />
+    {/*<Card />*/}
   </ParallaxProvider>
 )

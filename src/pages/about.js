@@ -4,6 +4,7 @@ import {graphql, useStaticQuery} from "gatsby";
 import Img from "gatsby-image";
 import "../styles/about.scss";
 import spark from "../../static/svg/spark.svg";
+import codingGirl from "../../static/svg/ddf.svg";
 import photo from "../images/framedPic.png";
 
 export default ({ location }) => {
