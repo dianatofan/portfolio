@@ -4,6 +4,7 @@
   color: $primary-color;
   display: flex;
   padding: 2.5rem 0;
+  margin: 0 6vw;
 
   .logo {
     cursor: pointer;
@@ -20,15 +21,6 @@
 .heartIcon {
   position: relative;
   top: 3px;
-}
-
-.introText {
-  background: #fff;
-  display: inline-block;
-  font-weight: 500;
-  font-size: 2.7rem;
-  color: $text-color;
-  width: 75%;
 }
 
 .navLink {
@@ -55,7 +47,7 @@
 .navigation {
   list-style-type: none;
   position: absolute;
-  right: 5rem;
+  right: 6vw;
   > li a {
     color: $text-color;
     text-decoration: none;
@@ -75,7 +67,7 @@
 .hamburgerMenu, .crossIcon {
   cursor: pointer;
   position: absolute;
-  right: 6rem;
+  right: 6vw;
 }
 
 .navigation > li {

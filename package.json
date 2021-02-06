@@ -28,6 +28,7 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.4",
     "react-scroll-parallax": "^2.3.2",
+    "react-snakke": "^1.2.3",
     "typeface-comfortaa": "^1.1.4",
     "typeface-metropolis": "0.0.74"
   },

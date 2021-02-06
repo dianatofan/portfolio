@@ -1,23 +1,25 @@
 @import "../colors.scss";
 
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: $text-color;
   height: 100vh;
-  padding: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-  transform: translateX(200%);
   width: 50%;
   text-align: center;
 
   &.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transform: translateX(0);
+  }
+
+  &.hidden {
+    display: none;
   }
 
   @media (max-width: 800px) {

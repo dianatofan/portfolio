@@ -13,7 +13,7 @@ export default ({ location }) => {
     location && location.href ? `/${location.href.split("/").slice(-1)}` : "/"
 
   return (
-    <header className="header">
+    <header className="header sticky" id="header">
       <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
       <ul className="navigation">
         <li className={activePage === "/" ? "active" : ""}>
