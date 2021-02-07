@@ -8,12 +8,15 @@ import "typeface-metropolis"
 import { ParallaxProvider } from "react-scroll-parallax"
 
 export default ({ location }) => (
-  <ParallaxProvider>
-    <div className="main">
-      <Header location={location} />
-      <Content />
-      <Footer />
-    </div>
-    {/*<Card />*/}
-  </ParallaxProvider>
+  <main>
+    <Header location={location} />
+    <Content />
+  </main>
+  // <ParallaxProvider>
+  //     <div className="main">
+  //       <Header location={location} />
+  //       <Footer />
+  //     </div>
+  //     {/*<Card />*/}
+  //   </ParallaxProvider>
 )

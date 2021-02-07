@@ -1,8 +1,10 @@
 @import "../colors.scss";
 
 button {
-  position: absolute;
-  right: 6vw;
+  //position: absolute;
+  //right: 6vw;
+  position: relative;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

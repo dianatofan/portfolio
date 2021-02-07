@@ -9,7 +9,11 @@ export default () => {
     "#722EC3",
     "#146dfb",
     "#1723B2",
-    "#223458",
+    // "#223458",
+    // "#8B4AFF",
+    // "#5654FF",
+    // "#C354FF",
+    // "#ff7171",
   ]
 
   const createRow = width => {
@@ -38,5 +42,9 @@ export default () => {
 
   const arr = Array.from(Array(HEIGHT).keys())
 
-  return <div className="graph">{arr.map(() => createRow(WIDTH))}</div>
+  return (
+    <div className="graphWrapper">
+      <div className="graph">{arr.map(() => createRow(WIDTH))}</div>
+    </div>
+  )
 }

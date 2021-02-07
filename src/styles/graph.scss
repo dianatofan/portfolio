@@ -1,9 +1,15 @@
 @import "colors";
 
+.graphWrapper {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .square {
-  width: 30px;
-  height: 30px;
-  background: red;
+  width: 2.2vw;
+  height: 2.2vw;
   transition: opacity .3s;
 }
 
