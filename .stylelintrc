@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "comment-empty-line-before": "always",
+    "max-empty-lines": 1,
+    "selector-list-comma-newline-after": "always",
+    "block-closing-brace-empty-line-before": "never",
+    "block-opening-brace-space-before": "always",
+    "block-opening-brace-newline-after": "always-multi-line"
+  }
+}

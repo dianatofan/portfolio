@@ -26,23 +26,15 @@ export default () => {
     <div className="contentWrapper">
       <div className="content">
         <h1 className="introText">
-          <span>
-            Hey!&nbsp;
-            <img
-              className="wavingHandIcon"
-              src={wavingHand}
-              width={36}
-              height={36}
-              alt=""
-            />{" "}
-          </span>
-          I'm Diana, a web developer living in Copenhagen. I love creating
+          <span>Hey! 👋🏻</span>
+          I'm Diana, a web developer based in Copenhagen. I love creating
           purposeful, human-centric experiences and bringing them to life.
           <div className="subtitle">
             Frontend engineer at{" "}
             <a href="https://www.maersk.com/" target="_blank">
               Maersk
             </a>
+            &nbsp;👩🏻‍💻
           </div>
         </h1>
         <Graph />

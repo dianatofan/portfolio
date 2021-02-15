@@ -29,13 +29,15 @@
     "react-feather": "^2.0.4",
     "react-scroll-parallax": "^2.3.2",
     "react-snakke": "^1.2.3",
+    "stylelint": "^13.9.0",
     "typeface-comfortaa": "^1.1.4",
     "typeface-metropolis": "0.0.74"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "stylelint-config-standard": "^20.0.0"
   },
   "repository": {
     "type": "git",
