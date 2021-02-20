@@ -8,7 +8,14 @@ import spark from "../../static/svg/spark.svg"
 export default ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "framedPic.png" }) {
+      image: file(relativePath: { eq: "framedPicture.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+        }
+         mountain: file(relativePath: { eq: "mountain.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -19,21 +26,18 @@ export default ({ location }) => {
   `)
 
   return (
-    <div>
+    <main className="aboutMe">
       <Header location={location} />
-      <div className="columns">
-        <Img
+      <div className="contentWrapper">
+        <div className="content">
+          <Img
           fluid={data.image.childImageSharp.fluid}
           style={{
-            margin: "2rem 2rem 0 0",
-            maxHeight: "60vh",
-            width: "20%",
-            display: "inline-block",
+            width: "50%"
           }}
           imgStyle={{ objectFit: "contain", width: "auto" }}
         />
         <section className="about-me-text">
-          <h1>_about</h1>
           <div>
             Hi! I'm Diana Tofan, a Romanian front-end developer living in
             Copenhagen. I have a BSc degree in Computer Science and Master's in
@@ -69,7 +73,8 @@ export default ({ location }) => {
             </a>
           </div>
         </section>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }

@@ -1,17 +1,27 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+.aboutMe {
+  .content {
+    height: 100vh;
+  }
+  .instaPics {
+    max-width: 70%;
+    margin:  auto;
+  }
+}
+
 .columns {
   display: flex;
   margin: 0 6vw;
 }
 
 .about-me-text {
-  margin-left: 2rem;
+  //margin-left: 2rem;
   color: $text-color;
   text-align: left;
-  font-size: 1rem;
-  width: 60%;
+  font-size: 1.1rem;
+  //width: 60%;
   justify-content: center;
   display: flex;
   flex-direction: column;

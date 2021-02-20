@@ -6,6 +6,7 @@ import Card from "../components/card"
 import "../styles/index.scss"
 import "typeface-metropolis"
 import { ParallaxProvider } from "react-scroll-parallax"
+import "animate.css";
 
 export default ({ location }) => (
   <main>

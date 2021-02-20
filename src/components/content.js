@@ -25,7 +25,7 @@ export default () => {
   return (
     <div className="contentWrapper">
       <div className="content">
-        <h1 className="introText">
+        <h1 className="introText animate__animated animate__fadeInLeft">
           <span>Hey! 👋🏻</span>
           I'm Diana, a web developer based in Copenhagen. I love creating
           purposeful, human-centric experiences and bringing them to life.

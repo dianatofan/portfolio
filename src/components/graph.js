@@ -9,11 +9,6 @@ export default () => {
     "#722EC3",
     "#146dfb",
     "#1723B2",
-    // "#223458",
-    // "#8B4AFF",
-    // "#5654FF",
-    // "#C354FF",
-    // "#ff7171",
   ]
 
   const createRow = width => {
@@ -24,6 +19,8 @@ export default () => {
       const borderRadius = `border${binary1 === 0 ? "Top" : "Bottom"}${
         binary2 === 0 ? "Left" : "Right"
       }Radius`
+      const animations = ["rotateIn", "fadeInRight"];
+      const randomElement = animations[Math.floor(Math.random() * animations.length)];
       items.push(
         <div
           className="square"
@@ -44,7 +41,7 @@ export default () => {
 
   return (
     <div className="graphWrapper">
-      <div className="graph">{arr.map(() => createRow(WIDTH))}</div>
+      <div className="graph animate__animated animate__fadeInRight">{arr.map(() => createRow(WIDTH))}</div>
     </div>
   )
 }

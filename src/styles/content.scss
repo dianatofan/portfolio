@@ -12,6 +12,7 @@
 
 .contentWrapper {
   background: #f5f9ff;
+  //background: $text-color;
 }
 
 .introText {
@@ -19,6 +20,7 @@
   flex-direction: column;
   font-weight: 500;
   font-size: calc(100% + 1.8vw);
+  //color: white;
   color: $text-color;
   justify-content: center;
   margin: 0;
