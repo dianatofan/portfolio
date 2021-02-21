@@ -1,11 +1,11 @@
 const path = require(`path`)
 
 module.exports = {
-  pathPrefix: `/`,
   siteMetadata: {
     title: `Diana Tofan`,
-    description: `Playground`,
-    author: `@gastbyjs`,
+    siteUrl: "https://dianatofan.net",
+    description: `Portfolio`,
+    author: `@dianatofan`,
   },
   plugins: [
     {
@@ -17,7 +17,6 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `typeface-metropolis`,
-    `typeface-comfortaa`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],
