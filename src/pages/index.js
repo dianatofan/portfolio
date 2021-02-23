@@ -5,14 +5,18 @@ import Footer from "../components/footer"
 import Card from "../components/card"
 import "../styles/index.scss"
 import "typeface-metropolis"
+import Layout from "../components/layout";
 import { ParallaxProvider } from "react-scroll-parallax"
 import "animate.css";
 
-export default ({ location }) => (
-  <main>
-    <Header location={location} />
-    <Content />
-  </main>
+export default ({ location }) => {
+  return (
+    <Layout location={location}>
+      <Content />
+    </Layout>
+  )
+}
+
   // <ParallaxProvider>
   //     <div className="main">
   //       <Header location={location} />
@@ -20,4 +24,3 @@ export default ({ location }) => (
   //     </div>
   //     {/*<Card />*/}
   //   </ParallaxProvider>
-)

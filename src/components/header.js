@@ -14,21 +14,23 @@ export default ({ location }) => {
 
   return (
     <header className="header sticky" id="header">
-      <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
-      <ul className="navigation">
-        <li className={activePage === "/" ? "active" : ""}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={activePage === "/about" ? "active" : ""}>
-          <Link to="/about">About</Link>
-        </li>
-        <li className={activePage === "/contact" ? "active" : ""}>
-          <Link to="/">Contact</Link>
-        </li>
-      </ul>
-      <div className="burgerMenuNavigation">
-        <Burger open={isOpen} setOpen={setOpen} />
-        <Menu open={isOpen} setOpen={setOpen} />
+      <div>
+        <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
+        <ul className="navigation">
+          <li className={activePage === "/" ? "active" : ""}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={activePage === "/about" ? "active" : ""}>
+            <Link to="/about">About</Link>
+          </li>
+          <li className={activePage === "/contact" ? "active" : ""}>
+            <Link to="/">Contact</Link>
+          </li>
+        </ul>
+        <div className="burgerMenuNavigation">
+          <Burger open={isOpen} setOpen={setOpen} />
+          <Menu open={isOpen} setOpen={setOpen} />
+        </div>
       </div>
     </header>
   )

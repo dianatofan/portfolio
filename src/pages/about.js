@@ -4,18 +4,35 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/about.scss"
 import spark from "../../static/svg/spark.svg"
+import Polaroid from "../components/polaroid"
+import { Instagram, Facebook, Linkedin, Twitter } from "react-feather";
+import Layout from "../components/layout";
 
 export default ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "framedPicture.png" }) {
+      image: file(relativePath: { eq: "group1.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
+      }
+      mountain: file(relativePath: { eq: "mountain.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
         }
-         mountain: file(relativePath: { eq: "mountain.png" }) {
+      }
+      running: file(relativePath: { eq: "running.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sunset: file(relativePath: { eq: "sunset.JPG" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -26,55 +43,69 @@ export default ({ location }) => {
   `)
 
   return (
-    <main className="aboutMe">
-      <Header location={location} />
-      <div className="contentWrapper">
-        <div className="content">
-          <Img
-          fluid={data.image.childImageSharp.fluid}
-          style={{
-            width: "50%"
-          }}
-          imgStyle={{ objectFit: "contain", width: "auto" }}
-        />
-        <section className="about-me-text">
-          <div>
-            Hi! I'm Diana Tofan, a Romanian front-end developer living in
-            Copenhagen. I have a BSc degree in Computer Science and Master's in
-            Digital Media Engineering.
+      <Layout location={location}>
+          <div className="content">
+            <Img
+              fluid={data.image.childImageSharp.fluid}
+              style={{
+                width: "80%",
+              }}
+              imgStyle={{ objectFit: "contain", width: "auto" }}
+            />
+            <section className="about-me-text">
+              <h1>Hi again! I'm Diana Tofan.</h1>
+              <p>
+                I'm a frontend developer passionate about UX design. Having a degree in computer science, I understand how to
+                build a software product from scratch and I'm familiar with the full-stack architecture.
+              </p>
+              <p>
+                The reason why I chose to focus on frontend is simple - I just enjoy it better. I have always
+                been more of a visual person, and for me it's extremely satisfying to see that my code produces a perceivable
+                output. Constantly improving user interfaces is the thing I find most rewarding in the web development world.
+              </p>
+              <p>
+                Besides frontend and design, another topics that I'm interested in are data visualization and human-computer interaction.
+                I love telling stories with data and convey the information clearly to help users extract meaningful insights.
+                I've also been fascinated by machine learning in the browser lately - and I always try to keep myself up to date with the recent breakthroughs
+                in technology.
+              </p>
+              <p>
+                Drop me a line if you would like to connect: {" "}
+                <a
+                  href="mailto:diana_tofan@ymail.com?Subject=Hello"
+                  target="_top"
+                >
+                  diana_tofan@ymail.com
+                </a>
+              </p>
+            </section>
           </div>
-          <div>
-            I have a passion for both programming and design and I'm always
-            striving to combine both sides when working on a project. My most
-            googled topics are about <b>UX design</b>,{" "}
-            <b>human-computer interaction</b> and <b>data visualization</b>.
+          <div className="instaPics">
+            <h2>When I'm not in front of the computer, I...</h2>
+            <div className="picsGrid">
+              <Polaroid
+                image={data.running.childImageSharp.fluid}
+                caption="go for a run"
+              />
+              <Polaroid
+                image={data.mountain.childImageSharp.fluid}
+                caption="explore the world"
+              />
+              <Polaroid
+                image={data.sunset.childImageSharp.fluid}
+                caption="watch the sunset"
+              />
+            </div>
           </div>
-          <span>
-            Anything that is visual would spark my interest and make me eager to
-            learn more <img className="spark-icon" src={spark} alt="" />
-          </span>
-          <div>
-            When I'm not coding I'm probably reading tech articles on{" "}
-            <a href="https://medium.com" target="_blank">
-              Medium
-            </a>{" "}
-            or searching for inspiration on{" "}
-            <a href="https://dribbble.com" target="_blank">
-              Dribbble
-            </a>{" "}
-            / <a href="https://behance.com">Behance</a>. In my spare time I
-            enjoy long runs, thought-provoking movies, laid-back gatherings or
-            spontaneous travel.
+          <div className="instaPics">
+            <h2>You can also find me on social media</h2>
+            <div className="picsGrid">
+              <Instagram />
+              <Facebook />
+              <Linkedin />
+              <Twitter />
+            </div>
           </div>
-          <div>
-            Drop me a line if you would like to connect:{" "}
-            <a href="mailto:diana_tofan@ymail.com?Subject=Hello" target="_top">
-              diana_tofan@ymail.com
-            </a>
-          </div>
-        </section>
-        </div>
-      </div>
-    </main>
+      </Layout>
   )
 }

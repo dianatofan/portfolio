@@ -14,7 +14,7 @@
           <h2>When I'm not in front of the computer, I...</h2>
           <Img
             fluid={data.mountain.childImageSharp.fluid}
-            style={{
+            style ={{
               margin: "20px 20px 20px 0",
               width: "20%"
             }}

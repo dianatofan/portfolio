@@ -23,22 +23,20 @@ export default () => {
   `)
 
   return (
-    <div className="contentWrapper">
-      <div className="content">
-        <h1 className="introText animate__animated animate__fadeInLeft">
-          <span>Hey! 👋🏻</span>
-          I'm Diana, a web developer based in Copenhagen. I love creating
-          purposeful, human-centric experiences and bringing them to life.
-          <div className="subtitle">
-            Frontend engineer at{" "}
-            <a href="https://www.maersk.com/" target="_blank">
-              Maersk
-            </a>
-            &nbsp;👩🏻‍💻
-          </div>
-        </h1>
-        <Graph />
-      </div>
+    <div className="content">
+      <h1 className="introText animate__animated animate__fadeInLeft">
+        <span>Hey! 👋🏻</span>
+        I'm Diana, a frontend developer based in Copenhagen. I love creating
+        purposeful, human-centric experiences and bringing them to life.
+        <div className="subtitle">
+          Software engineer at{" "}
+          <a href="https://www.maersk.com/" target="_blank">
+            Maersk
+          </a>
+          &nbsp;👩🏻‍💻
+        </div>
+      </h1>
+      <Graph />
     </div>
   )
 }
