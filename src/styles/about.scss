@@ -1,13 +1,9 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
-.aboutMe {
-  .content {
-    height: 100vh;
-  }
-  .instaPics {
-    max-width: 70%;
-    margin:  auto;
+.about-me-page {
+  &.content {
+    height: 80%;
   }
 }
 
@@ -17,29 +13,16 @@
 }
 
 .about-me-text {
-  //margin-left: 2rem;
   color: $text-color;
   text-align: left;
   font-size: 1.1rem;
   line-height: 160%;
-  //width: 60%;
   justify-content: center;
   display: flex;
   flex-direction: column;
 
   > div {
     margin: 1rem 0;
-  }
-}
-
-.spark-icon {
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-  top: 10px;
-  margin-left: 4px;
-  svg {
-    fill: $text-color;
   }
 }
 
@@ -55,4 +38,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
+}
+
+section {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  max-width: 90vw;
 }

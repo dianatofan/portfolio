@@ -1,13 +1,9 @@
 import React from "react"
 import "../styles/header.scss"
 import { useStaticQuery, graphql, navigate } from "gatsby"
-import { Heart } from "react-feather"
 import "../styles/content.scss"
 import Card from "./card"
-import wavingHand from "../../static/svg/finger.svg"
 import Graph from "./graph"
-import mouse from "../../static/svg/mouse.svg"
-import logo from "../images/logoNew.svg"
 
 export default () => {
   const data = useStaticQuery(graphql`

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "../styles/header.scss"
 import { Menu as MenuIcon, X } from "react-feather"
 import { Link, navigate } from "gatsby"
-import logo from "../images/logoNew.svg"
+import logo from "../images/logos/logo.svg"
 import { Burger } from "./header/hamburger"
 import { Menu } from "./header/menu"
 

@@ -1,11 +1,8 @@
 import React from "react"
-import Header from "../components/header"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "../styles/about.scss"
-import spark from "../../static/svg/spark.svg"
 import Polaroid from "../components/polaroid"
-import { Instagram, Facebook, Linkedin, Twitter } from "react-feather"
 import Layout from "../components/layout"
 
 export default ({ location }) => {
@@ -44,7 +41,7 @@ export default ({ location }) => {
 
   return (
     <Layout location={location}>
-      <div className="content">
+      <div className="about-me-page content">
         <Img
           fluid={data.image.childImageSharp.fluid}
           style={{
@@ -82,7 +79,7 @@ export default ({ location }) => {
           </p>
         </section>
       </div>
-      <div className="instaPics">
+      <section className="instaPics">
         <h2>When I'm not in front of the computer, I...</h2>
         <div className="picsGrid">
           <Polaroid
@@ -98,16 +95,7 @@ export default ({ location }) => {
             caption="watch the sunset"
           />
         </div>
-      </div>
-      <div className="instaPics">
-        <h2>My social media accounts</h2>
-        <div className="picsGrid">
-          <Instagram />
-          <Facebook />
-          <Linkedin />
-          <Twitter />
-        </div>
-      </div>
+      </section>
     </Layout>
   )
 }
