@@ -15,7 +15,12 @@ export default ({ location }) => {
   return (
     <header className="header sticky" id="header">
       <div>
-        <img src={logo} className="logo" alt="" onClick={() => navigate("/")} />
+        <img
+          src={logo}
+          className={`logo ${isOpen ? "white" : ""}`}
+          alt=""
+          onClick={() => navigate("/")}
+        />
         <ul className="navigation">
           <li className={activePage === "/" ? "active" : ""}>
             <Link to="/">Home</Link>

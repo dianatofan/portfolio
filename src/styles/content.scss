@@ -6,13 +6,15 @@
   justify-content: center;
   max-width: 70vw;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   gap: 3vw;
 }
 
 .contentWrapper {
   background: #f5f9ff;
-  //background: $text-color;
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: auto;
 }
 
 .introText {
@@ -30,10 +32,18 @@
   }
 }
 
+
+@media only screen and (max-width: 1000px) {
+  .content {
+    max-width: 90vw;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .content {
     flex-direction: column;
   }
+
   .introText {
     width: 100%;
   }
@@ -42,23 +52,4 @@
 .subtitle {
   font-size: 1rem;
   margin-top: 2rem;
-}
-
-.wavingHandIcon {
-  width: 3vw;
-  height: 3vw;
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-}
-
-
-@keyframes wave-animation {
-  0% { transform: rotate( 0.0deg) }
-  10% { transform: rotate(14.0deg) }
-  20% { transform: rotate(-8.0deg) }
-  30% { transform: rotate(14.0deg) }
-  40% { transform: rotate(-4.0deg) }
-  50% { transform: rotate(10.0deg) }
-  60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
 }

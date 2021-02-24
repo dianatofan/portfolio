@@ -17,7 +17,7 @@
   }
 
   &.sticky {
-    position: fixed;
+    flex: 0 0 auto;
     background: $white;
     z-index: 1;
   }
@@ -29,6 +29,11 @@
     -webkit-text-fill-color: transparent;
     width: 36px;
     height: 36px;
+    z-index: 2;
+
+    &.white {
+      filter: contrast(0) brightness(2);
+    }
   }
  }
 
