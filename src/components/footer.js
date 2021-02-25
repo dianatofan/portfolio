@@ -11,32 +11,44 @@ import "hint.css"
 const WIDTH = 32,
   HEIGHT = 32
 
+const IconItem = ({ href, src, alt }) => (
+  <a href={href} target="_blank" className="hint--top" aria-label={alt}>
+    <img src={src} width={WIDTH} height={HEIGHT} alt={alt} />
+  </a>
+)
+
 export default () => (
   <footer>
     <ul>
-      <li className="hint--top" aria-label="Email">
-        <img src={email} width={WIDTH} height={HEIGHT} alt="Email" />
-      </li>
-      <li className="hint--top" aria-label="Linkedin">
-        <img src={linkedin} width={WIDTH} height={HEIGHT} alt="Linkedin" />
-      </li>
-      <li className="hint--top" aria-label="Github">
-        <img src={github} width={WIDTH} height={HEIGHT} alt="Github" />
-      </li>
-      <li className="hint--top" aria-label="Twitter">
-        <img src={twitter} width={WIDTH} height={HEIGHT} alt="Twitter" />
-      </li>
-      <li className="hint--top" aria-label="Strava">
-        <img src={strava} width={WIDTH} height={HEIGHT} alt="Strava" />
-      </li>
+      <IconItem
+        href="mailto:diana_tofan@ymail.com?Subject=Hello"
+        src={email}
+        alt="Email"
+      />
+      <IconItem
+        href="https://www.linkedin.com/in/diana-tofan-43730013b/"
+        src={linkedin}
+        alt="Linkedin"
+      />
+      <IconItem
+        href="https://github.com/dianatofan"
+        src={github}
+        alt="Github"
+      />
+      <IconItem
+        href="https://twitter.com/dianatfn"
+        src={twitter}
+        alt="Twitter"
+      />
+      <IconItem
+        href="https://www.strava.com/athletes/49741647"
+        src={strava}
+        alt="Strava"
+      />
     </ul>
     <div className="line" />
     <small className="metadata">
       &copy; 2021 Diana Tofan. All rights reserved.
     </small>
-    Hello Sir,{" "}
-    <span className="hint--bottom" aria-label="Thank you!">
-      hover over me.
-    </span>
   </footer>
 )

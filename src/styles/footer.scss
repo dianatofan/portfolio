@@ -21,11 +21,11 @@ footer {
   ul {
     list-style-type: none;
     padding: 0;
-    li {
+
+    a {
       width: 32px;
       height: 32px;
       margin: 0 12px;
-
     }
   }
 
@@ -45,9 +45,18 @@ footer {
 }
 
 .hint--top {
-  &:hover::after {
-    font-family: "Metropolis", Verdana, sans-serif;
-    font-size: .8rem;
-    padding: 12px;
+  &:hover {
+    &::after {
+      font-family: "Metropolis", Verdana, sans-serif;
+      font-size: .8rem;
+      padding: 12px;
+      background-color: $light-blue;
+      color: $primary-color;
+      text-shadow: none;
+    }
+
+    &::before {
+      border-top-color: $light-blue;
+    }
   }
 }
