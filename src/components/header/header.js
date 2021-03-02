@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import "../styles/header.scss"
+import "../../styles/header/header.scss"
 import { Menu as MenuIcon, X } from "react-feather"
 import { Link, navigate } from "gatsby"
-import logo from "../images/logos/logo.svg"
-import { Burger } from "./header/hamburger"
-import { Menu } from "./header/menu"
+import logo from "../../images/logos/logo.svg"
+import { Burger } from "./hamburger"
+import { Menu } from "./menu"
 
 export default ({ location }) => {
   const [isOpen, setOpen] = useState(false)
@@ -28,8 +28,8 @@ export default ({ location }) => {
           <li className={activePage === "/about" ? "active" : ""}>
             <Link to="/about">About</Link>
           </li>
-          <li className={activePage === "/contact" ? "active" : ""}>
-            <Link to="/">Contact</Link>
+          <li className={activePage === "/resume" ? "active" : ""}>
+            <Link to="/resume">Resume</Link>
           </li>
         </ul>
         <div className="burgerMenuNavigation">

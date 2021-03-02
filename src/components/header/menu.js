@@ -16,8 +16,8 @@ export const Menu = ({ open }) => (
       </Link>
     </a>
     <a>
-      <Link className="animate__animated animate__fadeIn" to="/about">
-        Contact
+      <Link className="animate__animated animate__fadeIn" to="/resume">
+        Resume
       </Link>
     </a>
   </nav>

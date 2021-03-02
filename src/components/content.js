@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/header.scss"
+import "../styles/header/header.scss"
 import { useStaticQuery, graphql, navigate } from "gatsby"
 import "../styles/content.scss"
 import Card from "./card"

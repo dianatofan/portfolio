@@ -73,8 +73,11 @@ export default ({ location }) => {
           </p>
           <p>
             Drop me a line if you would like to connect:{" "}
-            <a href="mailto:diana_tofan@ymail.com?Subject=Hello" target="_top">
-              diana_tofan@ymail.com
+            <a
+              href="mailto:dianatofan.dt@gmail.com?Subject=Hello"
+              target="_top"
+            >
+              dianatofan.dt@gmail.com
             </a>
           </p>
         </section>

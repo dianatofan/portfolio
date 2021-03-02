@@ -21,7 +21,7 @@ export default () => (
   <footer>
     <ul>
       <IconItem
-        href="mailto:diana_tofan@ymail.com?Subject=Hello"
+        href="mailto:dianatofan.dt@gmail.com?Subject=Hello"
         src={email}
         alt="Email"
       />
