@@ -1,25 +1,36 @@
-@import "colors";
-
-.graphWrapper {
-  display: inherit;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.square {
-  width: 2vw;
-  height: 2vw;
-  transition: opacity .3s;
-  //filter: brightness(1.5) grayscale(0.4);
-}
-
-.row {
-  display: flex;
+.container {
+  display: grid;
+  grid-template-rows: repeat(14, 2vw);
+  grid-template-columns: repeat(10, 2vw);
 }
 
 @media only screen and (max-width: 1000px) {
-  .graph {
+  .container {
     display: none;
   }
+}
+
+.box {
+  width: 2vw;
+  height: 2vw;
+  z-index: 0;
+  position: relative;
+  transform: scale(0);
+  transition: border-top-left-radius 1s;
+}
+
+.borderTopLeftRadius {
+  border-top-left-radius: 100%;
+}
+
+.borderTopRightRadius {
+  border-top-right-radius: 100%;
+}
+
+.borderBottomLeftRadius {
+  border-bottom-left-radius: 100%;
+}
+
+.borderBottomRightRadius {
+  border-bottom-right-radius: 100%;
 }

@@ -1,8 +1,6 @@
 import React from "react"
-import "../styles/about.scss"
 import Layout from "../components/layout"
-import "../styles/resume.scss"
-import resume from "../images/resume.png"
+// import "../styles/resume.scss"
 
 export default ({ location }) => (
   <Layout location={location}>
