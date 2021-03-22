@@ -5,7 +5,7 @@ import "../styles/content.scss";
 
 export default () => (
   <div className="content">
-    <h1 className="introText animate__animated animate__fadeInLeft animate__slow">
+    <h1 className="introText animate__animated animate__fadeInLeft">
       <span>Hey! 👋🏻</span>
       I'm Diana, a frontend developer based in Copenhagen. I love creating
       purposeful, human-centric experiences and bringing them to life.

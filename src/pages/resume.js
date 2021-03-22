@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/layout"
-// import "../styles/resume.scss"
+import React from "react";
+import Layout from "../components/layout";
+import "../styles/resume.scss";
 
 export default ({ location }) => (
   <Layout location={location}>
@@ -14,4 +14,4 @@ export default ({ location }) => (
       />
     </div>
   </Layout>
-)
+);
