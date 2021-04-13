@@ -4,7 +4,9 @@ import { TimelineLite, Back, gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
 import "../styles/graph.scss";
 
-gsap.registerPlugin(CSSPlugin);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(CSSPlugin);
+}
 
 export default () => {
   const [squares, setSquares] = useState([]);

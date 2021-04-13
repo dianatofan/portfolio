@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import "../styles/about.scss"
-import Polaroid from "../components/polaroid"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import "../styles/about.scss";
+import Polaroid from "../components/polaroid";
+import Layout from "../components/layout";
 
 export default ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "group1.png" }) {
+      image: file(relativePath: { eq: "portraitNew.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -36,8 +36,43 @@ export default ({ location }) => {
           }
         }
       }
+      pixies: file(relativePath: { eq: "pixies.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      strokes: file(relativePath: { eq: "strokes.jpg" }) {
+        childImageSharp {
+          fixed(width: 200, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      killers: file(relativePath: { eq: "killers.png" }) {
+        childImageSharp {
+          fixed(width: 260, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      cure: file(relativePath: { eq: "cure.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      arcadeFire: file(relativePath: { eq: "arcadeFire.jpg" }) {
+        childImageSharp {
+          fixed(width: 200, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
-  `)
+  `);
 
   return (
     <Layout location={location}>
@@ -52,24 +87,25 @@ export default ({ location }) => {
         <section className="about-me-text">
           <h1>Hi again! I'm Diana Tofan.</h1>
           <p>
-            I'm a frontend developer passionate about UX design. Having a degree
-            in computer science, I understand how to build a software product
-            from scratch and I'm familiar with the full-stack architecture.
+            I'm a frontend developer with 5 years of experience passionate about
+            UX design. Having a degree in computer science, I understand how to
+            build a software product from scratch and I'm familiar with the
+            full-stack architecture.
           </p>
           <p>
             The reason why I chose to focus on frontend is simple - I just enjoy
-            it better. I have always been more of a visual person, and for me
-            it's extremely satisfying to see that my code produces a perceivable
-            output. Constantly improving user interfaces is the thing I find
-            most rewarding in the web development world.
+            it better. I have always considered myself a visual thinker and for
+            me it's extremely satisfying to see that my code produces a
+            perceivable output. Constantly improving user interfaces is the
+            thing I find most rewarding in the web development world.
           </p>
           <p>
             Besides frontend and design, another topics that I'm interested in
-            are data visualization and human-computer interaction. I love
-            telling stories with data and convey the information clearly to help
-            users extract meaningful insights. I've also been fascinated by
-            machine learning in the browser lately - and I always try to keep
-            myself up to date with the recent breakthroughs in technology.
+            are human-computer interaction and data visualization. I love
+            playing with D3 in my spare time and I always find interesting
+            datasets to explore. When it comes to writing code, I'm a firm
+            believer in less is more and I always try to keep myself up to date
+            with the recent breakthroughs in technology.
           </p>
           <p>
             Drop me a line if you would like to connect:{" "}
@@ -99,6 +135,25 @@ export default ({ location }) => {
           />
         </div>
       </section>
+      {/*<section>*/}
+      {/*  <h2>Bands I could listen to forever</h2>*/}
+      {/*  <Img fixed={data.pixies.childImageSharp.fixed} />*/}
+      {/*  <Img fixed={data.strokes.childImageSharp.fixed} />*/}
+      {/*  <Img fixed={data.killers.childImageSharp.fixed} />*/}
+      {/*  <Img fixed={data.arcadeFire.childImageSharp.fixed} />*/}
+      {/*</section>*/}
+      {/*<section>*/}
+      {/*  <h2>My skills in a nutshell</h2>*/}
+      {/*  <div>*/}
+      {/*    <div>Frontend</div>*/}
+      {/*    <div>Design</div>*/}
+      {/*    <div>DataVis</div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+      {/*<section>*/}
+      {/*  <h2>My personality type</h2>*/}
+      {/*  <div>Turbulent Entrepreneur (ESTP-T)</div>*/}
+      {/*</section>*/}
     </Layout>
-  )
-}
+  );
+};
