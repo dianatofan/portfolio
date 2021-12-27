@@ -1,0 +1,53 @@
+@import "colors";
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(14, 2vw);
+  grid-template-columns: repeat(10, 2vw);
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+}
+
+.box {
+  width: 2vw;
+  height: 2vw;
+  z-index: 0;
+  position: relative;
+  transition: border-top-left-radius 1s;
+  &.stripedRight {
+    background-color: transparent !important;
+    background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 10%,
+      $text-color 10%,
+      $text-color 20%);
+  }
+  &.stripedLeft {
+    background-color: transparent !important;
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10%,
+            $text-color 10%,
+            $text-color 20%);
+  }
+}
+
+.borderTopLeftRadius {
+  border-top-left-radius: 100%;
+}
+
+.borderTopRightRadius {
+  border-top-right-radius: 100%;
+}
+
+.borderBottomLeftRadius {
+  border-bottom-left-radius: 100%;
+}
+
+.borderBottomRightRadius {
+  border-bottom-right-radius: 100%;
+}

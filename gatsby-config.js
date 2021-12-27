@@ -1,7 +1,32 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "portfolio",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: path.join(__dirname, `src`, `images`),
+    },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Diana Tofan',
+        short_name: 'logo',
+        start_url: '/',
+        display: 'standalone',
+        icon: 'src/images/logos/g12.svg',
+      },
+    },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "typeface-metropolis",
+  ],
 };

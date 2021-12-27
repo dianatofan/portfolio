@@ -1,0 +1,167 @@
+@import "colors";
+
+.rectangle {
+  padding: 40px 0 40px 40px;
+  color: black;
+  margin: 0 6vw;
+}
+
+.rectangle .img {
+  height: auto;
+  bottom: 0;
+  right: 0;
+  position: relative;
+}
+
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.rectangle .title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  //color: #5151b1;
+}
+
+.rectangle .role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-color;
+  opacity: .5;
+}
+
+.rectangle .description,
+.rectangle .button {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: $text-color
+}
+
+.rectangle.parallel-coordinates {
+  background: #daf3db;
+}
+
+.rectangle.geomapping {
+  background: #F7F6C4;
+}
+
+.rectangle.ted-talks {
+  background: #f1def7;
+}
+
+.rectangle .button {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.rectangle .button:hover {
+  font-weight: 700;
+}
+
+.rectangle.time-series,
+.rectangle.geomapping {
+  //margin: 10px 10px 10px 0;
+}
+
+.rectangle.parallel-coordinates,
+.rectangle.ted-talks {
+  margin: 10px 0 10px 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .rectangle {
+    width: 100%;
+  }
+}
+
+.right-column.image {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.right-column.image:hover {
+  background:white;
+  transform: scale(1.05);
+}
+
+.title-section {
+  margin: 2rem 12vw;
+  h1 {
+    margin-right: 40px;
+    font-size: 2rem;
+    width: 35%;
+  }
+  display: flex;
+}
+
+.basic-info {
+  display: flex;
+  align-items: center;
+  > div {
+    margin: 2rem 20px;
+  }
+  .headline {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8rem;
+    color: $text-color;
+    opacity: .5;
+  }
+}
+
+.problem {
+  background: #f3f3fd;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 2rem;
+    margin: 0 6vw 0 12vw;
+  }
+  > * {
+    padding: 2rem 0;
+  }
+  > div {
+    padding-right: 4rem;
+    margin: 0 12vw 0 6vw;
+  }
+}
+
+blockquote {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 16vw;
+  .quote-mark {
+    font-size: 8rem;
+    height: 100px;
+  }
+  .quote {
+    padding: 0 6rem;
+  }
+}
+
+.quote-section {
+  background: $eggplant;
+  color: $white;
+  padding: 2rem 0;
+}
+
+.user-types {
+  margin: 2rem 0;
+  text-align: center;
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: 340px 340px;
+  grid-row: auto;
+  grid-column-gap: 80px;
+  grid-row-gap: 20px;
+}
+
+.max-length {
+  overflow: auto;
+  max-width: 75ch;
+}

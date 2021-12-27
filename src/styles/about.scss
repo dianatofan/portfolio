@@ -1,0 +1,100 @@
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+.about-me-page {
+  &.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.columns {
+  display: flex;
+  margin: 0 6vw;
+}
+
+.about-me-text {
+  color: $text-color;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  > div {
+    margin: 1rem 0;
+  }
+
+  > h1 {
+    line-height: 30px;
+  }
+}
+
+.caption {
+  font-family: "Architects Daughter", cursive;
+  position: relative;
+  bottom: 70px;
+  left: 4%;
+  text-align: center;
+}
+
+.picsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6%;
+
+  div {
+    width: calc(200px + 8vw);
+  }
+}
+
+section {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-me-page {
+    &.content {
+      flex-direction: column;
+      height: auto;
+      margin-top: 60px;
+    }
+  }
+  .about-me-text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-me-text {
+    max-width: none;
+  }
+  .instaPics {
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 1595px) {
+  .picsGrid {
+    gap: 12%;
+  }
+}
+
+@media only screen and (max-width: 632px) {
+  .picsGrid {
+    display: flex;
+    justify-content: center;
+    div {
+      width: 90%;
+    }
+  }
+}
+
+.instaPics {
+  margin-bottom: 60px;
+}

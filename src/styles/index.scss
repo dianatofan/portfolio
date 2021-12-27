@@ -1,0 +1,23 @@
+@import "colors";
+
+body {
+  font-family: "Metropolis", Verdana, sans-serif;
+  color: #373737;
+  margin: 0;
+}
+
+image {
+  transition: opacity 500ms ease 0s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $link-color-pink;
+}
