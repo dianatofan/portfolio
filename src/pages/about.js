@@ -1,11 +1,13 @@
-import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import "../styles/about.scss";
-import Polaroid from "../components/polaroid";
-import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 
-export default ({ location }) => {
+import Layout from "../components/layout";
+import Polaroid from "../components/polaroid";
+
+import "../styles/about.scss";
+
+export default function ({ location }) {
   const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "aboutmepic.png" }) {
@@ -36,7 +38,7 @@ export default ({ location }) => {
           }
         }
       }
-       art: file(relativePath: { eq: "art.png" }) {
+      art: file(relativePath: { eq: "art.png" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -81,21 +83,22 @@ export default ({ location }) => {
         <section className="about-me-text">
           <h1>Hi again! I'm Diana Tofan.</h1>
           <p>
-            I'm a frontend developer based in Copenhagen passionate about
-            UX design. I have been building websites for almost five years and have
-            always been excited about making pixel-perfect apps, however I rarely
-            had the opportunity to share my ideas and contribute to the
-            design process as a software engineer. 
+            I'm a frontend developer based in Copenhagen passionate about UX
+            design. I have been building websites for almost five years and have
+            always been excited about making pixel-perfect apps, however I
+            rarely had the opportunity to share my ideas and contribute to the
+            design process as a software engineer.
           </p>
           <p>
-            I would love to change that and step closer into the world of UX/UI! Having a computer science
-            background, I can easily identify the technical limitations when prototyping a solution and
-            come up with feasible designs. Constantly improving user interfaces is the thing I find most
-            rewarding in the web development world.
+            I would love to change that and step closer into the world of UX/UI!
+            Having a computer science background, I can easily identify the
+            technical limitations when prototyping a solution and come up with
+            feasible designs. Constantly improving user interfaces is the thing
+            I find most rewarding in the web development world.
           </p>
           <p>
             Send me a message if you would like to connect 😄
-            <br/>
+            <br />
             <a
               href="mailto:dianatofan.dt@gmail.com?Subject=Hello"
               target="_top"
@@ -106,6 +109,7 @@ export default ({ location }) => {
             <a
               href="https://linkedin.com/in/diana-tofan"
               target="_blank"
+              rel="noreferrer"
             >
               Linkedin
             </a>
@@ -127,9 +131,9 @@ export default ({ location }) => {
             image={data.sunset.childImageSharp.fluid}
             caption="watch the sunset"
           />
-          </div>
-          <h2>Things that inspire me</h2>
-          <div className="picsGrid">
+        </div>
+        <h2>Things that inspire me</h2>
+        <div className="picsGrid">
           <Polaroid
             image={data.art.childImageSharp.fluid}
             caption="street art"
@@ -144,25 +148,25 @@ export default ({ location }) => {
           />
         </div>
       </section>
-      {/*<section>*/}
-      {/*  <h2>Bands I could listen to forever</h2>*/}
-      {/*  <Img fixed={data.pixies.childImageSharp.fixed} />*/}
-      {/*  <Img fixed={data.strokes.childImageSharp.fixed} />*/}
-      {/*  <Img fixed={data.killers.childImageSharp.fixed} />*/}
-      {/*  <Img fixed={data.arcadeFire.childImageSharp.fixed} />*/}
-      {/*</section>*/}
-      {/*<section>*/}
-      {/*  <h2>My    skills in a nutshell</h2>*/}
-      {/*  <div>*/}
-      {/*    <div>Frontend</div>*/}
-      {/*    <div>Design</div>*/}
-      {/*    <div>DataVis</div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-      {/*<section>*/}
-      {/*  <h2>My personality type</h2>*/}
-      {/*  <div>Turbulent Entrepreneur (ESTP-T)</div>*/}
-      {/*</section>*/}
+      {/* <section> */}
+      {/*  <h2>Bands I could listen to forever</h2> */}
+      {/*  <Img fixed={data.pixies.childImageSharp.fixed} /> */}
+      {/*  <Img fixed={data.strokes.childImageSharp.fixed} /> */}
+      {/*  <Img fixed={data.killers.childImageSharp.fixed} /> */}
+      {/*  <Img fixed={data.arcadeFire.childImageSharp.fixed} /> */}
+      {/* </section> */}
+      {/* <section> */}
+      {/*  <h2>My    skills in a nutshell</h2> */}
+      {/*  <div> */}
+      {/*    <div>Frontend</div> */}
+      {/*    <div>Design</div> */}
+      {/*    <div>DataVis</div> */}
+      {/*  </div> */}
+      {/* </section> */}
+      {/* <section> */}
+      {/*  <h2>My personality type</h2> */}
+      {/*  <div>Turbulent Entrepreneur (ESTP-T)</div> */}
+      {/* </section> */}
     </Layout>
   );
-};
+}

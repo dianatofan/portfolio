@@ -1,9 +1,12 @@
-import React from "react"
-import Content from "../components/content"
-import "../styles/index.scss"
 import "typeface-metropolis"
-import Layout from "../components/layout"
+import React from "react"
+
 import "animate.css"
+
+import Content from "../components/content"
+import Layout from "../components/layout"
+
+import "../styles/index.scss"
 
 export default ({ location }) => {
   return (

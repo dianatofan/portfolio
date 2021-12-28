@@ -1,7 +1,9 @@
 import React from "react";
-import "../styles/header/header.scss";
+
+import Card from "./card";
+
 import "../styles/content.scss";
-import Card from "../components/card";
+import "../styles/header/header.scss";
 
 export default () => (
   <>

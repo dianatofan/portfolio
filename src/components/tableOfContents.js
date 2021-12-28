@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useRef } from "react"
+
 import "../styles/tableOfContents.scss"
 
 export default ({ sections }) => {

@@ -1,7 +1,8 @@
-import React from "react";
-import { useStaticQuery, graphql, navigate } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import React from "react";
+
 import "../styles/card.scss";
 
 export const query = graphql`
@@ -11,7 +12,8 @@ export const query = graphql`
         gatsbyImageData(layout: FIXED)
       }
     }
-  }`;
+  }
+`;
 
 export default ({ data }) => {
   // const data = useStaticQuery(graphql`
@@ -29,7 +31,7 @@ export default ({ data }) => {
   return (
     <div className="rectangle time-series">
       <div className="top image" onClick={() => navigate("/racefinder")}>
-         <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
+        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
         {/* <Img fixed={data.imageOne.childImageSharp.fixed} /> */}
       </div>
       <div className="bottom">
@@ -40,9 +42,7 @@ export default ({ data }) => {
           Web application that generates charts based on input data Built in
           React, Redux & D3.js
         </div>
-        <div className="role">
-          DATA VISUALIZATION | UX DESIGN
-        </div>
+        <div className="role">DATA VISUALIZATION | UX DESIGN</div>
       </div>
     </div>
   );
