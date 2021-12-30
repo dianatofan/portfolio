@@ -22,15 +22,6 @@ import midFidelity from "../images/racefinder/midFidelity.png";
 import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
 
 export default function Racefinder({ location }) {
-  const settings = {
-    dots: true,
-    centerMode: true,
-    speed: 500,
-    responsive: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <div className="project">
       <Snakke color="#5455d6" top="0" height="3px" zIndex="10" />
@@ -252,151 +243,20 @@ export default function Racefinder({ location }) {
           </div>
         </div>
       </section>
-      <section className="problem" style={{ background: "white" }}>
-        <h1>Wireframes</h1>
-        <div>
-          <div>
-            <h2>Brainstorming possible solutions</h2>
-            <div className="max-length">
-              Low-fidelity prototype:
-              <img
-                src={wireframe1}
-                alt="wireframes"
-                className="wireframe-image"
-              />
-              <img
-                src={wireframe2}
-                alt="wireframes"
-                className="wireframe-image"
-              />
-              Mid-fidelity prototype:
-              <img
-                src={midFidelity}
-                alt="midFidelity"
-                className="wireframe-image"
-              />
-              <h1 className="statement">
-                Most people agreed that the race-booking process is longer than
-                necessary.
-              </h1>
-              This thing alone gave me the green light to carry on with my
-              research.
-              <div>
-                <br />
-                Pain points when trying to register for a race:
-                <ul>
-                  <li>
-                    information is <b>spread all over</b> the internet
-                  </li>
-                  <li>
-                    it's <b>tricky</b> to find all the details about one race on
-                    a single page
-                  </li>
-                  <li>
-                    the racebooking process never gets easier, it's always{" "}
-                    <b>time-consumifng</b>
-                  </li>
-                  <li>
-                    <b>no mobile app</b> developed in this direction
-                  </li>
-                  <li>
-                    race calendars are <b>not exactly focused on running</b>,
-                    they usually cover more types of sports like swimming or
-                    cycling
-                  </li>
-                  <li>
-                    <b>limited filtering functionality</b> - no attributes such
-                    as distance, difficulty or proximity exist
-                  </li>
-                </ul>
-              </div>
-              <div>
-                After conducting{" "}
-                <a href="https://pubmed.ncbi.nlm.nih.gov/32230999/">
-                  secondary research
-                </a>
-                , I identified four types of runners which would serve as my
-                target audience:
-                <div className="types">
-                  <div className="type">
-                    <div className="icon">
-                      <img
-                        src={runnerType1}
-                        alt="icon"
-                        width={80}
-                        height={80}
-                      />
-                    </div>
-                    <div className="icon-description">
-                      <b>Individual casual runners</b>
-                      <span>
-                        People for whom running is not a main sport who usually
-                        run 5km or 10km and rarely participate in competitions
-                      </span>
-                    </div>
-                  </div>
-                  <div className="type">
-                    <div className="icon">
-                      <img
-                        src={runnerType2}
-                        alt="icon"
-                        width={80}
-                        height={80}
-                      />
-                    </div>
-                    <div className="icon-description">
-                      <b>Individual competitive runners</b>
-                      <span>
-                        People who train very frequently and who participate in
-                        5 or more events annually
-                      </span>
-                    </div>
-                  </div>
-                  <div className="type">
-                    <div className="icon">
-                      <img
-                        src={runnerType3}
-                        alt="icon"
-                        width={80}
-                        height={80}
-                      />
-                    </div>
-                    <div className="icon-description">
-                      <b>Social competitive runners</b>
-                      <span>
-                        People who run with friends, colleagues, small groups or
-                        clubs and participate in fewer events
-                      </span>
-                    </div>
-                  </div>
-                  <div className="type">
-                    <div className="icon">
-                      <img
-                        src={runnerType4}
-                        alt="icon"
-                        width={80}
-                        height={80}
-                      />
-                    </div>
-                    <div className="icon-description">
-                      <b>Devoted runners</b>
-                      <span>
-                        Experienced runners with more time at their disposal who
-                        engage in longer distances and participate in 5 or more
-                        events annually{" "}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                Based on the main findings, I tailored two user personas that
-                best describe the user needs. ---- insert carousel with personas
-                ----
-              </div>
-              <div></div>
-            </div>
-          </div>
+      <section className="wireframes">
+        <h2>Brainstorming possible solutions</h2>
+        <h1>Low-fidelity prototype</h1>
+        <div className="low-fidelity">
+          <img src={wireframe1} alt="wireframes" className="wireframe-image" />
+          <img src={wireframe2} alt="wireframes" className="wireframe-image" />
+        </div>
+        <div className="mid-fidelity">
+          <h1>Mid-fidelity prototype</h1>
+          <img
+            src={midFidelity}
+            alt="midFidelity"
+            className="wireframe-image"
+          />
         </div>
       </section>
     </div>

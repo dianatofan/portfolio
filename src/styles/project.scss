@@ -119,4 +119,25 @@
     filter: grayscale(100%);
     width: 100%;
   }
+  .wireframes {
+    > h1,
+    > h2 {
+      padding: 0 6rem;
+    }
+    > h1 {
+      text-align: center;
+    }
+    .low-fidelity {
+      padding: 0 3rem;
+      width: 85ch;
+      margin: 0 auto;
+    }
+    .mid-fidelity {
+      background: $mandarin;
+      padding: 2rem 6rem 3rem 6rem;
+      > h1 {
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
