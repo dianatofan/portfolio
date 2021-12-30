@@ -1,9 +1,10 @@
-import { ChevronUp } from "react-feather";
 import React from "react";
 import Snakke from "react-snakke";
 import Carousel from "nuka-carousel";
 
 import Header from "../components/header/header";
+import Footer from "../components/footer";
+import ScrollToTopButton from "../components/scroll-to-top-button";
 
 import "../styles/project.scss";
 
@@ -25,21 +26,7 @@ export default function Racefinder({ location }) {
   return (
     <div className="project">
       <Snakke color="#5455d6" top="0" height="3px" zIndex="10" />
-      <ChevronUp
-        size={40}
-        color="#223458"
-        style={{
-          cursor: "pointer",
-          position: "fixed",
-          right: "6vw",
-          bottom: "40px",
-        }}
-        onClick={() => {
-          document
-            .getElementById("header")
-            .scrollIntoView({ behavior: "smooth" });
-        }}
-      />
+      <ScrollToTopButton background="#373737" />
       <Header location={location} />
       <div className="full-screen-header">
         <img
@@ -259,6 +246,7 @@ export default function Racefinder({ location }) {
           />
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

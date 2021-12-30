@@ -1,21 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import 'hint.css';
+import "hint.css";
 
-import '../styles/card.scss';
-import '../styles/footer.scss';
-import email from '../images/logos/email.svg';
-import github from '../images/logos/github.svg';
-import linkedin from '../images/logos/linkedin.svg';
-import strava from '../images/logos/strava.png';
-import twitter from '../images/logos/twitter.svg';
+import "../styles/card.scss";
+import "../styles/footer.scss";
+import email from "../images/logos/email.svg";
+import github from "../images/logos/github.svg";
+import linkedin from "../images/logos/linkedin.svg";
+import strava from "../images/logos/strava.png";
+import twitter from "../images/logos/twitter.svg";
 
 const WIDTH = 32;
 const HEIGHT = 32;
 
 function IconItem({ href, src, alt }) {
   return (
-    <a href={href} target="_blank" className="hint--top" aria-label={alt} rel="noreferrer">
+    <a
+      href={href}
+      target="_blank"
+      className="hint--top"
+      aria-label={alt}
+      rel="noreferrer"
+    >
       <img src={src} width={WIDTH} height={HEIGHT} alt={alt} />
     </a>
   );
@@ -23,7 +29,7 @@ function IconItem({ href, src, alt }) {
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <ul>
         <IconItem
           href="mailto:dianatofan.dt@gmail.com?Subject=Hello"
