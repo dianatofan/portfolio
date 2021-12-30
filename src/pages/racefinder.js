@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel";
 import Header from "../components/header/header";
 import Footer from "../components/footer";
 import ScrollToTopButton from "../components/scroll-to-top-button";
+import TableOfContents from "../components/table-of-contents";
 
 import "../styles/project.scss";
 
@@ -25,8 +26,8 @@ import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
 export default function Racefinder({ location }) {
   return (
     <div className="project">
-      <Snakke color="#5455d6" top="0" height="3px" zIndex="10" />
-      <ScrollToTopButton background="#373737" />
+      <Snakke color="#5455d6" top="0" height="4px" zIndex="10" />
+      <ScrollToTopButton />
       <Header location={location} />
       <div className="full-screen-header">
         <img
@@ -53,7 +54,7 @@ export default function Racefinder({ location }) {
         </div>
       </section>
       <section className="problem">
-        <h1>Overview</h1>
+        <h1 id="overview">Overview</h1>
         <div>
           <div>
             <h3 className="subtitle">Problem</h3>
@@ -95,7 +96,7 @@ export default function Racefinder({ location }) {
         </blockquote>
       </section>
       <section className="problem" style={{ background: "white" }}>
-        <h1>Research</h1>
+        <h1 id="research">Research</h1>
         <div>
           <div>
             <h2>Gaining insights from runners</h2>
@@ -232,13 +233,13 @@ export default function Racefinder({ location }) {
       </section>
       <section className="wireframes">
         <h2>Brainstorming possible solutions</h2>
-        <h1>Low-fidelity prototype</h1>
+        <h1 id="low-fidelity">Low-fidelity prototype</h1>
         <div className="low-fidelity">
           <img src={wireframe1} alt="wireframes" className="wireframe-image" />
           <img src={wireframe2} alt="wireframes" className="wireframe-image" />
         </div>
         <div className="mid-fidelity">
-          <h1>Mid-fidelity prototype</h1>
+          <h1 id="mid-fidelity">Mid-fidelity prototype</h1>
           <img
             src={midFidelity}
             alt="midFidelity"

@@ -2,14 +2,14 @@ import React, { useEffect, useCallback, useState } from "react";
 
 import { ChevronUp, ChevronDown } from "react-feather";
 
-export default function ScrollToTopButton({ background }) {
+export default function ScrollToTopButton() {
   const style = {
     cursor: "pointer",
     position: "fixed",
     right: "6vw",
     bottom: "40px",
     zIndex: 999,
-    background,
+    background: "#373737",
     borderRadius: "50%",
     padding: "4px",
   };
