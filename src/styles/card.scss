@@ -7,7 +7,7 @@
 }
 
 .rectangle .img {
-  height: auto;
+  height: auto; //7D203C
   bottom: 0;
   right: 0;
   position: relative;
@@ -31,14 +31,14 @@
   font-size: 1rem;
   font-weight: 600;
   color: $text-color;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .rectangle .description,
 .rectangle .button {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: $text-color
+  color: $text-color;
 }
 
 .rectangle.parallel-coordinates {
@@ -46,7 +46,7 @@
 }
 
 .rectangle.geomapping {
-  background: #F7F6C4;
+  background: #f7f6c4;
 }
 
 .rectangle.ted-talks {
@@ -81,14 +81,13 @@
 
 .right-column.image {
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .right-column.image:hover {
-  background:white;
+  background: white;
   transform: scale(1.05);
 }
-
 
 // .basic-info {
 //   display: flex;
@@ -104,7 +103,6 @@
 //     opacity: .5;
 //   }
 // }
-
 
 .user-types {
   margin: 2rem 0;

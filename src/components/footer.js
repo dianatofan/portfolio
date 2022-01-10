@@ -59,7 +59,7 @@ export default function Footer() {
       </ul>
       <div className="line" />
       <small className="metadata">
-        &copy; 2021 Diana Tofan. All rights reserved.
+        &copy; {`${new Date().getFullYear()}`} Diana Tofan. All rights reserved.
       </small>
     </footer>
   );

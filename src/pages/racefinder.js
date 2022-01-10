@@ -19,7 +19,11 @@ import persona2 from "../images/racefinder/persona2.png";
 
 import wireframe1 from "../images/racefinder/wireframes1.jpg";
 import wireframe2 from "../images/racefinder/wireframes2.jpg";
-import midFidelity from "../images/racefinder/midFidelity.png";
+import midFidelity from "../images/racefinder/midFidelityRounded.png";
+import signUpFlow from "../images/racefinder/signUpFlow.png";
+import onboarding from "../images/racefinder/onboarding.png";
+import profileAndHistory from "../images/racefinder/profileAndHistory.png";
+import map from "../images/racefinder/map.png";
 
 import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
 
@@ -246,7 +250,54 @@ export default function Racefinder({ location }) {
             className="wireframe-image"
           />
         </div>
+        <div className="mid-fidelity">
+          <h1 id="mid-fidelity">High-fidelity prototype</h1>
+          <section>
+            <div className="subsection-title">Sign-up flow</div>
+            <img
+              src={signUpFlow}
+              alt="signUpFlow"
+              className="final-design-image"
+            />
+          </section>
+          <section>
+            <div className="subsection-title">Onboarding</div>
+            <img
+              src={onboarding}
+              alt="onboarding"
+              className="final-design-image"
+            />
+          </section>
+          <section>
+            <div className="subsection-title">
+              Profile page & previous races
+            </div>
+            <img
+              src={profileAndHistory}
+              alt="profileAndHistory"
+              className="final-design-image"
+            />
+          </section>
+          <section>
+            <div className="subsection-title">Filter races and sign up</div>
+            <img src={map} alt="map" className="final-design-image" />
+          </section>
+        </div>
       </section>
+      <div className="iframe-container">
+        <iframe
+          style={{
+            border: "none",
+            background: "#fff",
+          }}
+          width="1400"
+          height="800"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Flu0VBSCpiFcH1fJCLtOk5l%2FUntitled%3Fnode-id%3D251%253A6118%26scaling%3Dscale-down%26page-id%3D241%253A380%26starting-point-node-id%3D251%253A6118%26hide-ui=1"
+          allowfullscreen
+          allowtransparency
+          frameBorder={0}
+        ></iframe>
+      </div>
       <Footer />
     </div>
   );

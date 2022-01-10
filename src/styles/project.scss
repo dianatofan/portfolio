@@ -119,6 +119,12 @@
     filter: grayscale(100%);
     width: 100%;
   }
+  .final-design-image {
+    width: 100%;
+  }
+  .subsection-title {
+    font-size: 1.5rem;
+  }
   .wireframes {
     > h1,
     > h2 {
@@ -139,5 +145,11 @@
         margin-bottom: 4rem;
       }
     }
+  }
+  .iframe-container {
+    background: $black;
+    color: $white;
+    text-align: center;
+    padding: 40px 0;
   }
 }
