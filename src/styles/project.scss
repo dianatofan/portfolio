@@ -13,6 +13,7 @@
 
   .title-section {
     margin: 2rem 12vw;
+    gap: 60px;
     @media only screen and (min-width: 1000px) {
       margin: 2rem 12vw;
     }
@@ -43,27 +44,42 @@
     }
   }
 
-  .problem {
-    background: #f3f3fd;
+  .section {
+    // background: #f3f3fd;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    .subtitle {
-      text-transform: uppercase;
+    > * {
+      padding: 2rem;
     }
     h1 {
-      font-size: 2rem;
-      margin: 0 6vw 0 12vw;
+      margin: 0;
+      padding-bottom: 0;
     }
-    > * {
-      padding: 2rem 0;
-    }
-    > div {
-      padding-right: 4rem;
-      margin: 0 12vw 0 6vw;
-    }
+
     .statement {
       margin: 20px 0;
-      line-height: 40px;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      flex-direction: row;
+      h1 {
+        font-size: 2rem;
+        margin: 0 6vw 0 12vw;
+      }
+      > * {
+        padding: 2rem 0;
+      }
+      > div {
+        padding-right: 4rem;
+        margin: 0 12vw 0 6vw;
+      }
+      .statement {
+        line-height: 40px;
+      }
+    }
+    .subtitle {
+      text-transform: uppercase;
     }
   }
 
@@ -82,26 +98,51 @@
   }
 
   .quote-section {
-    background: $eggplant;
+    // background: $eggplant;
     color: $white;
     padding: 2rem 0;
   }
   .types {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-areas:
+      "cas"
+      "comp"
+      "soc"
+      "dev";
+    @media only screen and (min-width: 500px) {
+      grid-template-areas:
+        "cas comp"
+        "soc dev";
+    }
+    @media only screen and (min-width: 1400px) {
+      grid-template-areas: "cas comp soc dev";
+    }
+    padding: 0;
     margin-top: 20px;
+    grid-gap: 40px;
+    list-style-type: none;
+    text-align: center;
     .type {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 20%;
-      gap: 10px;
+      justify-content: flex-start;
+      gap: 20px;
+      &:nth-child(1) {
+        grid-area: cas;
+      }
+      &:nth-child(2) {
+        grid-area: comp;
+      }
+      &:nth-child(3) {
+        grid-area: soc;
+      }
+      &:nth-child(4) {
+        grid-area: dev;
+      }
     }
     .icon {
-      background: $eggplant;
+      // background: $eggplant;
       width: 130px;
       height: 130px;
       border-radius: 50%;
@@ -139,7 +180,7 @@
       margin: 0 auto;
     }
     .mid-fidelity {
-      background: $mandarin;
+      // background: $mandarin;
       padding: 2rem 6rem 3rem 6rem;
       > h1 {
         margin-bottom: 4rem;
@@ -147,9 +188,23 @@
     }
   }
   .iframe-container {
-    background: $black;
+    // background: $black;
     color: $white;
     text-align: center;
     padding: 40px 0;
+  }
+
+  .survey {
+    text-align: center;
+    background: #f0f0f0;
+    max-width: 100%;
+    padding: 4rem;
+    > img {
+      max-width: 100%;
+      @media only screen and (min-width: 1000px) {
+        max-width: 60%;
+      }
+      text-align: center;
+    }
   }
 }

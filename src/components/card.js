@@ -1,38 +1,18 @@
-import { GatsbyImage } from "gatsby-plugin-image";
-import { graphql, navigate, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { navigate } from "gatsby";
 import React from "react";
+import Img from "gatsby-image";
+import { Eye } from "react-feather";
 
 import "../styles/card.scss";
 
-export const query = graphql`
-  {
-    file(relativePath: { eq: "timeSeriesIpad.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FIXED)
-      }
-    }
-  }
-`;
-
-export default ({ data }) => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     imageOne: file(relativePath: { eq: "timeSeriesIpad.png" }) {
-  //       childImageSharp {
-  //         fixed(width: 600, height: 450, quality: 100) {
-  //           ...GatsbyImageSharpFixed
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
+export default function Card({ image }) {
   return (
-    <div className="rectangle time-series">
+    <div className="rectangle">
       <div className="top image" onClick={() => navigate("/racefinder")}>
-        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
-        {/* <Img fixed={data.imageOne.childImageSharp.fixed} /> */}
+        <Img
+          fixed={{ ...image, aspectRatio: 1 }}
+          style={{ cursor: "pointer", position: "relative" }}
+        />
       </div>
       <div className="bottom">
         <div className="title">
@@ -46,4 +26,4 @@ export default ({ data }) => {
       </div>
     </div>
   );
-};
+}
