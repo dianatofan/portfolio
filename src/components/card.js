@@ -5,7 +5,7 @@ import { Eye } from "react-feather";
 
 import "../styles/card.scss";
 
-export default function Card({ image }) {
+export default function Card({ image, title, description, role }) {
   return (
     <div className="rectangle">
       <div className="top image" onClick={() => navigate("/racefinder")}>
@@ -15,14 +15,9 @@ export default function Card({ image }) {
         />
       </div>
       <div className="bottom">
-        <div className="title">
-          Visual Exploration of Time Series in Healthcare
-        </div>
-        <div className="description">
-          Web application that generates charts based on input data Built in
-          React, Redux & D3.js
-        </div>
-        <div className="role">DATA VISUALIZATION | UX DESIGN</div>
+        <div className="title">{title}</div>
+        <div className="description">{description}</div>
+        <div className="role">{role}</div>
       </div>
     </div>
   );

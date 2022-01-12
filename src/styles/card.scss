@@ -1,14 +1,16 @@
 @import "colors";
 
 .rectangle {
-  padding: 40px 0 40px 40px;
+  // padding: 40px 0 40px 40px;
   color: black;
-  margin: 0 6vw;
+  // margin: 0 6vw;
 }
 
 .rectangle .image {
   position: relative;
   cursor: pointer;
+  width: 100%;
+  max-width: 500px;
   height: 500px;
   &:hover {
     &:before {
@@ -29,29 +31,9 @@
   }
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
-}
-
-.rectangle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 50%;
-}
-
 .rectangle .title {
   margin: 20px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   //color: #5151b1;
 }

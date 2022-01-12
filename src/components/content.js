@@ -39,10 +39,24 @@ export default function Content() {
         <div className="icon-scroll" />
       </div>
       {/* <h2 className="banner">COMING SOON</h2> */}
-      <div className="projects-grid">
-        <Card image={data.racefinder.childImageSharp.fixed} />
-        <Card image={data.timeseries.childImageSharp.fixed} />
-      </div>
+      <section className="past-work animate__animated animate__fadeIn animate__delay-1s">
+        <div className="empty-space" />
+        <h2>Past work</h2>
+        <div className="projects-grid">
+          <Card
+            title="Optimizing the racebooking process"
+            description="Mobile app that helps runners find their next race quicker and support local events by increasing race registrations"
+            role="UX/UI DESIGN | USER RESEARCH"
+            image={data.racefinder.childImageSharp.fixed}
+          />
+          <Card
+            title="Visual Exploration of Time Series in Healthcare"
+            description="Web application that generates charts based on custom input data. Built in React, Redux & D3.js"
+            role="DATA VISUALIZATION | UX/UI DESIGN"
+            image={data.timeseries.childImageSharp.fixed}
+          />
+        </div>
+      </section>
     </>
   );
 }
