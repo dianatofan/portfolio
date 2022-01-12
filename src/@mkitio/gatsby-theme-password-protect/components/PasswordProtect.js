@@ -17,8 +17,8 @@ const PasswordProtect = () => {
   };
 
   return (
-    <div className="wrapper">
-      <Lock width={80} height={80} />
+    <div className="wrapper animate__animated animate__fadeIn">
+      <Lock width={60} height={60} />
       <h1>This content is protected</h1>
       <form onSubmit={onSubmit}>
         <input

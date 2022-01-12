@@ -44,8 +44,8 @@ export default function Content() {
         <h2>Past work</h2>
         <div className="projects-grid">
           <Card
-            title="Optimizing the racebooking process"
-            description="Mobile app that helps runners find their next race quicker and support local events by increasing race registrations"
+            title="Optimizing the Racebooking Process"
+            description="Mobile app that helps runners find their next race easier. Built in Figma"
             role="UX/UI DESIGN | USER RESEARCH"
             image={data.racefinder.childImageSharp.fixed}
           />
