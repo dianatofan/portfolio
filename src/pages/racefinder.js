@@ -36,7 +36,7 @@ export default function Racefinder({ location }) {
     dark: "#2a3d62",
   };
   return (
-    <div className="project">
+    <div className="project  animate__animated animate__fadeIn">
       <Snakke color={colors.medium} top="0" height="4px" zIndex="10" />
       <ScrollToTopButton />
       <Header location={location} />
@@ -44,7 +44,7 @@ export default function Racefinder({ location }) {
         <img
           src={timeSeriesHeader}
           alt=""
-          style={{ maxHeight: "60vh", width: "100%", display: "inline-block" }}
+          style={{ height: "auto", width: "100%", display: "inline-block" }}
         />
       </div>
       <section className="title-section flex-wrap">

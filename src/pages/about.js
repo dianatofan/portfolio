@@ -7,7 +7,7 @@ import Polaroid from "../components/polaroid";
 
 import "../styles/about.scss";
 
-export default function ({ location }) {
+export default function About({ location }) {
   const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "aboutmepic.png" }) {
@@ -83,18 +83,18 @@ export default function ({ location }) {
         <section className="about-me-text">
           <h1>Hi again! I'm Diana Tofan.</h1>
           <p>
-            I'm a frontend developer based in Copenhagen passionate about UX
-            design. I have been building websites for almost five years and have
+            I'm a frontend developer based in Copenhagen passionate about
+            product design. I have been building websites for six years and have
             always been excited about making pixel-perfect apps, however I
-            rarely had the opportunity to share my ideas and contribute to the
+            rarely have the opportunity to share my ideas and contribute to the
             design process as a software engineer.
           </p>
           <p>
-            I would love to change that and step closer into the world of UX/UI!
-            Having a computer science background, I can easily identify the
-            technical limitations when prototyping a solution and come up with
-            feasible designs. Constantly improving user interfaces is the thing
-            I find most rewarding in the web development world.
+            I would love to change that and step into the world of UX/UI! In my
+            journey as a developer I have always paid great attention to details
+            and made sure all the apps I built were accessible, eye-pleasing and
+            device agnostic. Nothing makes me happier than puting a smile on
+            users' faces with design ideas that work.
           </p>
           <p>
             Send me a message if you would like to connect 😄

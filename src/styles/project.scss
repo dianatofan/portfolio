@@ -15,7 +15,7 @@
     margin: 2rem 12vw;
     gap: 60px;
     @media only screen and (min-width: 1000px) {
-      margin: 2rem 12vw;
+      margin: 4rem 12vw;
     }
 
     h1 {
@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0;
     > * {
       padding: 2rem;
     }
@@ -100,7 +101,7 @@
   .quote-section {
     // background: $eggplant;
     color: $white;
-    padding: 2rem 0;
+    padding: 4rem 0;
   }
   .types {
     display: grid;
