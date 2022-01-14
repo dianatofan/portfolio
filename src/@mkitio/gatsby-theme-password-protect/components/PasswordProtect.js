@@ -29,7 +29,7 @@ const PasswordProtect = () => {
   return (
     <>
       {passwordCorrect ? null : (
-        <div className="wrapper animate__animated animate__fadeIn">
+        <div className="password-protected-page animate__animated animate__fadeIn">
           <Lock width={60} height={60} />
           <h1>This content is protected</h1>
           <form onSubmit={onSubmit}>
