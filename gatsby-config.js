@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: "@mkitio/gatsby-theme-password-protect",
       options: {
-        password: process.env.ACCESS_KEY,
+        password: "notreadyyet",
         pagePaths: ["/racefinder", "/about", "/resume"],
         partialMatching: true,
       },

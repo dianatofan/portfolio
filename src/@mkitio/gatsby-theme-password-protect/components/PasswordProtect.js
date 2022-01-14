@@ -13,7 +13,7 @@ const PasswordProtect = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (password === process.env.ACCESS_KEY) {
+    if (password === "notreadyyet") {
       document.cookie = `${COOKIE_NAME}=${password}`;
       setPasswordCorrect(true);
       window.location.reload(); // eslint-disable-line

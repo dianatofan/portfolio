@@ -11,15 +11,15 @@ export default function Content() {
     query {
       racefinder: file(relativePath: { eq: "card.png" }) {
         childImageSharp {
-          fixed(width: 500, height: 500, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       timeseries: file(relativePath: { eq: "timeSeriesIpad.png" }) {
         childImageSharp {
-          fixed(width: 500, height: 500, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -47,13 +47,15 @@ export default function Content() {
             title="Optimizing the Racebooking Process"
             description="Mobile app that helps runners find their next race easier. Built in Figma"
             role="UX/UI DESIGN | USER RESEARCH"
-            image={data.racefinder.childImageSharp.fixed}
+            image={data.racefinder.childImageSharp.fluid}
+            url="racefinder"
           />
           <Card
             title="Visual Exploration of Time Series in Healthcare"
             description="Web application that generates charts based on custom input data. Built in React, Redux & D3.js"
             role="DATA VISUALIZATION | UX/UI DESIGN"
-            image={data.timeseries.childImageSharp.fixed}
+            image={data.timeseries.childImageSharp.fluid}
+            url="timeseries"
           />
         </div>
       </section>

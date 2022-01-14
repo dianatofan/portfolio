@@ -15,7 +15,10 @@
 }
 
 .past-work {
-  max-width: 70vw;
+  max-width: 90vw;
+  @media only screen and (min-width: 1000px) {
+    max-width: 70vw;
+  }
   margin: 0 auto;
 }
 
@@ -185,14 +188,18 @@
     "racefinder"
     "timeseries";
   place-items: start;
-  @media only screen and (min-width: 1300px) {
+  max-width: none;
+  margin: 0 0 70px 0;
+  grid-gap: 70px;
+  @media only screen and (min-width: 1000px) {
     grid-template-areas: "racefinder timeseries";
     align-items: start;
     justify-content: center;
+    grid-gap: 120px;
+    max-width: 80vw;
+    margin: 3vw auto 4vw auto;
   }
-  grid-gap: 120px;
-  max-width: 80vw;
-  margin: 3vw auto 4vw auto;
+
   .rectangle {
     &:nth-of-type(1) {
       grid-area: racefinder;

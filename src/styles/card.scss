@@ -1,18 +1,24 @@
 @import "colors";
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .rectangle {
-  // padding: 40px 0 40px 40px;
-  color: black;
-  // margin: 0 6vw;
+  color: $black;
 }
 
 .rectangle .image {
   position: relative;
   cursor: pointer;
-  width: 100%;
-  max-width: 500px;
-  height: 500px;
+  transition: transform 0.5s linear;
   &:hover {
+    transform: scale(1.05);
     &:before {
       content: "";
       width: 100%;
@@ -21,12 +27,24 @@
       top: 0;
       left: 0;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.4);
       z-index: 1;
     }
     &:after {
       background-color: transparent;
-      transition: all 0.5 ease;
+    }
+  }
+  &.racefinder {
+    &:hover {
+      &:before {
+        background: rgb(0, 123, 255, 0.8);
+      }
+    }
+  }
+  &.timeseries {
+    &:hover {
+      &:before {
+        background: rgb(159, 68, 255, 0.8);
+      }
     }
   }
 }
@@ -35,7 +53,6 @@
   margin: 20px 0;
   font-size: 1.5rem;
   font-weight: bold;
-  //color: #5151b1;
 }
 
 .rectangle .role {
@@ -52,18 +69,6 @@
   color: $text-color;
 }
 
-.rectangle.parallel-coordinates {
-  background: #daf3db;
-}
-
-.rectangle.geomapping {
-  background: #f7f6c4;
-}
-
-.rectangle.ted-talks {
-  background: #f1def7;
-}
-
 .rectangle .button {
   display: inline-block;
   cursor: pointer;
@@ -72,11 +77,6 @@
 
 .rectangle .button:hover {
   font-weight: 700;
-}
-
-.rectangle.time-series,
-.rectangle.geomapping {
-  //margin: 10px 10px 10px 0;
 }
 
 .rectangle.parallel-coordinates,
@@ -100,21 +100,6 @@
   transform: scale(1.05);
 }
 
-// .basic-info {
-//   display: flex;
-//   align-items: center;
-//   > div {
-//     margin: 2rem 20px;
-//   }
-//   .headline {
-//     text-transform: uppercase;
-//     font-weight: bold;
-//     font-size: .8rem;
-//     color: $text-color;
-//     opacity: .5;
-//   }
-// }
-
 .user-types {
   margin: 2rem 0;
   text-align: center;
@@ -131,6 +116,18 @@
   max-width: 75ch;
 }
 
+.eye-icon {
+  position: absolute;
+  z-index: 1;
+  color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .bottom {
-  width: 500px;
+  transition: transform 0.3s linear;
+  &.slide-down {
+    transform: translate(0, 20px) scale(1.05);
+  }
 }
