@@ -1,4 +1,7 @@
 const path = require(`path`);
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -26,7 +29,7 @@ module.exports = {
     {
       resolve: "@mkitio/gatsby-theme-password-protect",
       options: {
-        password: "notreadyyet",
+        password: process.env.ACCESS_KEY,
         pagePaths: ["/racefinder", "/about", "/resume"],
         partialMatching: true,
       },

@@ -13,7 +13,7 @@ const PasswordProtect = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (password === "notreadyyet") {
+    if (password === process.env.ACCESS_KEY) {
       document.cookie = `${COOKIE_NAME}=${password}`;
       setPasswordCorrect(true);
       window.location.reload(); // eslint-disable-line
@@ -27,7 +27,7 @@ const PasswordProtect = () => {
   };
 
   return (
-    <div>
+    <>
       {passwordCorrect ? null : (
         <div className="wrapper animate__animated animate__fadeIn">
           <Lock width={60} height={60} />
@@ -52,7 +52,7 @@ const PasswordProtect = () => {
           </form>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
