@@ -9,17 +9,27 @@ import "../styles/header/header.scss";
 export default function Content() {
   const data = useStaticQuery(graphql`
     query {
-      racefinder: file(relativePath: { eq: "card.png" }) {
+      racefinder: file(relativePath: { eq: "thumbnail1.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
-      timeseries: file(relativePath: { eq: "timeSeriesIpad.png" }) {
+      timeseries: file(relativePath: { eq: "thumbnail2.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      splitwise: file(relativePath: { eq: "splitwise.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -45,17 +55,25 @@ export default function Content() {
         <div className="projects-grid">
           <Card
             title="Optimizing the Racebooking Process"
-            description="Mobile app that helps runners find their next race easier. Built in Figma"
+            description="Mobile app that helps runners find their next race easier. Prototyped in Figma"
             role="UX/UI DESIGN | USER RESEARCH"
             image={data.racefinder.childImageSharp.fluid}
             url="racefinder"
           />
           <Card
             title="Visual Exploration of Time Series in Healthcare"
-            description="Web application that generates charts based on custom input data. Built in React, Redux & D3.js"
+            description="Web application that generates charts based on input data. Built in React, Redux & D3.js"
             role="DATA VISUALIZATION | UX/UI DESIGN"
             image={data.timeseries.childImageSharp.fluid}
-            url="timeseries"
+            url="time-series"
+          />
+          <Card
+            title="Splitwise Redesign [in progress]"
+            description="Identifying and solving user problems in the current app"
+            role="UX/UI DESIGN | USER RESEARCH"
+            image={data.splitwise.childImageSharp.fluid}
+            url="splitwise"
+            inProgress
           />
         </div>
       </section>

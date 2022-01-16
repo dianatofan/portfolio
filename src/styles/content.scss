@@ -187,7 +187,7 @@
   grid-template-areas:
     "racefinder"
     "timeseries";
-  place-items: start;
+  place-items: center;
   max-width: none;
   margin: 0 0 70px 0;
   grid-gap: 70px;
@@ -195,7 +195,7 @@
     grid-template-areas: "racefinder timeseries";
     align-items: start;
     justify-content: center;
-    grid-gap: 120px;
+    grid-gap: 150px;
     max-width: 80vw;
     margin: 3vw auto 4vw auto;
   }

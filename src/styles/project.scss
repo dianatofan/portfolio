@@ -3,7 +3,9 @@
 .project {
   section {
     max-width: max-content;
-    // line-height: 24px;
+    &:not(.quote-section) {
+      line-height: 24px;
+    }
   }
 
   .flex-wrap {
@@ -12,40 +14,59 @@
   }
 
   .title-section {
-    margin: 2rem 12vw;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     @media only screen and (min-width: 1000px) {
-      margin: 4rem 12vw;
+      align-items: center;
+    }
+    margin: 2rem 12vw;
+    padding: 2rem 0;
+
+    .duration {
+      grid-area: duration;
     }
 
-    h1 {
-      margin-right: 40px;
-      font-size: 2rem;
-      width: 35%;
+    .type {
+      grid-area: type;
     }
-    display: flex;
-  }
 
-  .basic-info {
-    display: flex;
-    align-items: center;
-    > div {
-      margin: 1rem 20px;
-      @media only screen and (min-width: 1000px) {
-        margin: 2rem 20px;
+    .role {
+      grid-area: role;
+    }
+
+    .basic-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .duration {
+        margin-top: 40px;
+      }
+      .headline {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color: $text-color;
+        opacity: 0.5;
       }
     }
-    .headline {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 0.8rem;
-      color: $text-color;
-      opacity: 0.5;
+    @media only screen and (min-width: 1000px) {
+      flex-direction: row;
+      .basic-info {
+        flex-direction: row;
+        gap: 40px;
+        .duration {
+          margin-top: 0;
+        }
+      }
+      > div {
+        margin: 0;
+        margin-right: 12vw;
+      }
     }
   }
 
   .section {
-    // background: #f3f3fd;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,22 +100,29 @@
         line-height: 40px;
       }
     }
-    .subtitle {
-      text-transform: uppercase;
-    }
   }
 
   blockquote {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
-    margin: 0 16vw;
+    margin: 0 8vw;
     .quote-mark {
-      font-size: 8rem;
+      font-size: 6rem;
       height: 100px;
     }
     .quote {
-      padding: 0 6rem;
+      padding: 0 3rem;
+    }
+    @media only screen and (min-width: 1000px) {
+      font-size: 3rem;
+      margin: 0 16vw;
+      .quote-mark {
+        font-size: 8rem;
+      }
+      .quote {
+        padding: 0 6rem;
+      }
     }
   }
 
@@ -157,10 +185,6 @@
       align-items: center;
     }
   }
-  .wireframe-image {
-    filter: grayscale(100%);
-    width: 100%;
-  }
   .final-design-image {
     width: 100%;
   }
@@ -168,6 +192,9 @@
     font-size: 1.5rem;
   }
   .wireframes {
+    p {
+      padding: 0 6vw;
+    }
     > h1,
     > h2 {
       padding: 0 6rem;
@@ -177,22 +204,30 @@
     }
     .low-fidelity {
       padding: 0 3rem;
-      width: 85ch;
-      margin: 0 auto;
     }
-    .mid-fidelity {
-      // background: $mandarin;
-      padding: 2rem 6rem 3rem 6rem;
-      > h1 {
-        margin-bottom: 4rem;
+    .mid-fidelity,
+    .high-fidelity {
+      padding: 4rem 6vw;
+    }
+    .high-fidelity {
+      color: $white;
+      .subtitle {
+        color: $white;
+        text-transform: uppercase;
+        opacity: 0.5;
+        font-weight: 600;
+        margin: 80px 0 40px 0;
+        text-align: center;
       }
     }
   }
   .iframe-container {
-    // background: $black;
     color: $white;
     text-align: center;
-    padding: 40px 0;
+    height: 800px;
+    iframe {
+      width: 100%;
+    }
   }
 
   .survey {
@@ -200,12 +235,30 @@
     background: #f0f0f0;
     max-width: 100%;
     padding: 4rem;
-    > img {
-      max-width: 100%;
-      @media only screen and (min-width: 1000px) {
-        max-width: 60%;
-      }
-      text-align: center;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    color: $navy;
+    opacity: 0.5;
+    font-size: 0.9rem;
+  }
+
+  section {
+    max-width: none;
+  }
+
+  .slider-frame {
+    margin-top: 0;
+  }
+
+  .full-screen-text {
+    margin: 0 2vw;
+    > h2 {
+      padding: 0 6vw;
+    }
+    @media only screen and (min-width: 1000px) {
+      margin: 0 20vw;
     }
   }
 }

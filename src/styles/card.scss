@@ -11,6 +11,8 @@
 
 .rectangle {
   color: $black;
+  width: 100%;
+  max-width: 500px;
 }
 
 .rectangle .image {
@@ -40,10 +42,18 @@
       }
     }
   }
-  &.timeseries {
+  &.time-series {
     &:hover {
       &:before {
         background: rgb(159, 68, 255, 0.8);
+      }
+    }
+  }
+  &.splitwise {
+    background: $white;
+    &:hover {
+      &:before {
+        background: rgba(48, 158, 116, 0.8);
       }
     }
   }
