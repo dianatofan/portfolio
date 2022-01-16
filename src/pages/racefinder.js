@@ -515,7 +515,7 @@ export default function Racefinder({ location }) {
           }}
           width="1400"
           height="800"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Flu0VBSCpiFcH1fJCLtOk5l%2FUntitled%3Fnode-id%3D251%253A6118%26scaling%3Dscale-down%26page-id%3D241%253A380%26starting-point-node-id%3D251%253A6118%26hide-ui=1"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Flu0VBSCpiFcH1fJCLtOk5l%2FUntitled%3Fnode-id%3D241%253A5949%26scaling%3Dscale-down%26page-id%3D241%253A380%26starting-point-node-id%3D241%253A5949%26hide-ui%3D1"
           allowfullscreen
           allowtransparency
           frameBorder={0}
