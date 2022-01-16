@@ -5,7 +5,7 @@ import Snakke from "react-snakke";
 import Header from "../components/header/header";
 
 import "../styles/about.scss";
-import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
+// import timeSeriesHeader from "../images/timeSeriesHeaderCrop.png";
 
 export default function Project({ title, colors }) {
   // const { primaryColor, secondaryColor } = colors;
