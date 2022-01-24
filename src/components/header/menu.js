@@ -1,7 +1,7 @@
-import React from "react"
-import "../../styles/header/menu.scss"
-import { Link, navigate } from "gatsby"
-import "animate.css"
+import React from "react";
+import "../../styles/header/menu.scss";
+import { Link } from "gatsby";
+import "animate.css";
 
 export const Menu = ({ open }) => (
   <nav className={open ? "open" : "hidden"}>
@@ -21,4 +21,4 @@ export const Menu = ({ open }) => (
       </Link>
     </a>
   </nav>
-)
+);

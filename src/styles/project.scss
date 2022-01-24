@@ -262,3 +262,19 @@
     }
   }
 }
+
+.project.dark-mode .subtitle,
+.project.dark-mode .title-section .basic-info .headline {
+  color: #b9c4ff;
+  opacity: 1;
+}
+
+.side-columns {
+  display: flex;
+  flex-direction: column;
+  // margin: 0 !important;
+
+  // @media only screen and (min-width: 1400px) {
+  //   margin: 0 12vw 0 6vw !important;
+  // }
+}

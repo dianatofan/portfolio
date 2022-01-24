@@ -25,7 +25,7 @@ export default function Content() {
           }
         }
       }
-      splitwise: file(relativePath: { eq: "splitwise.png" }) {
+      sustainability: file(relativePath: { eq: "primevideo.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -68,12 +68,12 @@ export default function Content() {
             url="time-series"
           />
           <Card
-            title="Splitwise Redesign [in progress]"
+            title="Amazon Prime Video Redesign [in progress]"
             description="Identifying and solving user problems in the current app"
             role="UX/UI DESIGN | USER RESEARCH"
-            image={data.splitwise.childImageSharp.fluid}
+            image={data.sustainability.childImageSharp.fluid}
             url="splitwise"
-            inProgress
+            url="prime"
           />
         </div>
       </section>
