@@ -57,6 +57,14 @@ export default function Racefinder({ location }) {
           }
         }
       }
+      primeIa: file(relativePath: { eq: "prime/primeVideoIA.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
       header: file(relativePath: { eq: "racefinder/coverblue.png" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
@@ -245,8 +253,8 @@ export default function Racefinder({ location }) {
         <div className="full-screen-text">
           <h2 style={{ marginTop: "100px" }}>What do the users say?</h2>
           <p style={{ marginBottom: "60px" }}>
-            I collected insights from 3 social media apps: Reddit, Google Play
-            and App Store, where people expressed their honest opinions
+            I collected insights from 3 social media platforms: Reddit, Google
+            Play and App Store, where people expressed their honest opinions
             regarding Amazon Prime Video. The app generated a lot of frustration
             among users, but it also presented a few advantages over its
             competitors many were not even aware of - features that should be
@@ -298,33 +306,56 @@ export default function Racefinder({ location }) {
                 Hulu (more than 24,000 movies and 2,100 shows)
               </li>
             </ul>
-            <p>Things that "scream" for improvement:</p>
+            <p>Things that scream for improvement:</p>
             <ul>
               <li>
-                TV-series seasons acting as individual shows instead of
-                belonging to one bucket
+                The <b>search functionality</b> where TV shows are separated by
+                seasons
               </li>
               <li>
-                The search functionality which doesn't support partial matches,
-                nor does it suggest appropriate titles
+                <b>Clunky navigation</b> that buries the main functionalities
+                under a thick layer of UI screens
               </li>
               <li>
-                Clunky navigation that buries the main functionalities under a
-                thick layer of UI screens
+                <b>Disorganized content</b> making the process of finding
+                something to watch unnecessarily difficult
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <section className="section" style={{ background: colors.dark }}>
+        <h1>Define</h1>
+        <div>
+          <h2>What are Prime Video's key features?</h2>
+          <div className="max-length">
+            To start with a recap, let's review where Amazon Prime Video shines
+            at. According to its website, its primary goals are the following:
+            <ul>
+              <li>
+                offer a huge selection of TV series and movies customers won't
+                find anywhere else
+              </li>
+              <li>allow users to stream from any device</li>
+              <li>
+                go behind the scenes using X-ray to explore cast information
+              </li>
+            </ul>{" "}
+            <h2 style={{ marginTop: "40px" }}>Dissecting the app</h2>
+            <p>
+              The thing that was mostly criticized in Prime Video was related to
+              the poor video organization and users' inability to find anything
+              to watch due to unintuitive navigation and hierarchy. Because of
+              that, I visualized the current Information Architecture (IA) and
+              marked the duplicated sections in blue.
+            </p>
+            <h2 style={{ marginTop: "60px", marginBottom: "40px" }}>
+              Amazon Prime Video Information Architecture
+            </h2>
             <Img
-              fluid={data.usabilityTest.childImageSharp.fluid}
-              style={{ margin: "20px auto" }}
+              fluid={data.primeIa.childImageSharp.fluid}
+              style={{ margin: "0 auto" }}
             />
-            <h1 className="statement">
-              Participants had the tendency to zoom in the map.
-            </h1>
-            However this feature was not supported at the moment. They also
-            wished to see their current location on the map, along with the
-            pinpoints. Regarding the invitations, there was no way to tell what
-            people you previously invited to a race, so having that in plain
-            sight would have also been helpful.
           </div>
         </div>
       </section>

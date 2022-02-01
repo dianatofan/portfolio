@@ -10,13 +10,8 @@ import ScrollToTopButton from "../components/scroll-to-top-button";
 
 import "../styles/project.scss";
 
-import runnerType1 from "../images/racefinder/runnerType1.png";
-import runnerType2 from "../images/racefinder/runnerType2.png";
-import runnerType3 from "../images/racefinder/runnerType3.png";
-import runnerType4 from "../images/racefinder/runnerType4.png";
-
-import persona1 from "../images/racefinder/persona1.png";
-import persona2 from "../images/racefinder/persona2.png";
+import persona1 from "../images/sustainability/persona1.png";
+import persona2 from "../images/sustainability/persona2.png";
 
 export default function Racefinder({ location }) {
   const data = useStaticQuery(graphql`
@@ -31,7 +26,27 @@ export default function Racefinder({ location }) {
           }
         }
       }
-      header: file(relativePath: { eq: "racefinder/coverblue.png" }) {
+      surveyResults: file(
+        relativePath: { eq: "sustainability/surveyResults.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      checkoutFlow: file(
+        relativePath: { eq: "sustainability/checkoutFlow.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      header: file(relativePath: { eq: "sustainability/cover.png" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -39,33 +54,43 @@ export default function Racefinder({ location }) {
           }
         }
       }
-      survey: file(relativePath: { eq: "racefinder/research.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      wireframe1: file(relativePath: { eq: "racefinder/wireframes1.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      wireframe2: file(relativePath: { eq: "racefinder/wireframes2.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      midFidelity: file(
-        relativePath: { eq: "racefinder/midFidelityRounded.png" }
+      designSystem: file(
+        relativePath: { eq: "sustainability/designSystem.png" }
       ) {
+        childImageSharp {
+          fluid(maxWidth: 3000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      wireframe1: file(relativePath: { eq: "sustainability/sketches.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      midFidelity: file(relativePath: { eq: "sustainability/wireframes.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      highFidelity: file(
+        relativePath: { eq: "sustainability/highFidelity.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1400, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      feedback: file(relativePath: { eq: "sustainability/feedback.png" }) {
         childImageSharp {
           fluid(maxWidth: 1800, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -73,51 +98,7 @@ export default function Racefinder({ location }) {
           }
         }
       }
-      signUpFlow: file(relativePath: { eq: "racefinder/signUpFlow.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      onboarding: file(relativePath: { eq: "racefinder/onboarding.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      profileAndHistory: file(
-        relativePath: { eq: "racefinder/profileAndHistory.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      map: file(relativePath: { eq: "racefinder/map.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      usabilityTest: file(
-        relativePath: { eq: "racefinder/usabilityTest.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-      refinements: file(relativePath: { eq: "racefinder/refinements.png" }) {
+      refinements: file(relativePath: { eq: "sustainability/revision.png" }) {
         childImageSharp {
           fluid(maxWidth: 1400, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -128,9 +109,9 @@ export default function Racefinder({ location }) {
     }
   `);
   const colors = {
-    light: "#f1fff9",
-    medium: "#17af71",
-    dark: "#0c5047",
+    light: "#f4ffec",
+    medium: "#28c524",
+    dark: "#204c1f",
   };
   return (
     <div className="project animate__animated animate__fadeIn">
@@ -139,22 +120,19 @@ export default function Racefinder({ location }) {
       <Header location={location} />
       <Img fluid={data.header.childImageSharp.fluid} />
       <section className="title-section">
-        <div>
-          <h1 style={{ marginBottom: "10px" }}>Green packaging</h1>
+        <div style={{ maxWidth: "35%" }}>
+          <h1 style={{ marginBottom: "10px" }}>Sustainable E-Commerce</h1>
           <h3 style={{ margin: 0, color: colors.dark, opacity: 0.5 }}>
-            Reduce packaging waste in online shopping
+            Reimagining the checkout flow to reduce packaging waste in online
+            orders
           </h3>
         </div>
         <div className="basic-info max-length">
           <div className="duration">
             <div className="headline">Duration</div>
-            <div>6 months</div>
+            <div>2 months</div>
           </div>
           <div className="type">
-            <div className="headline">Type</div>
-            <div>Self-initiated project</div>
-          </div>
-          <div className="role">
             <div className="headline">Role</div>
             <div>UX/UI designer</div>
           </div>
@@ -171,18 +149,19 @@ export default function Racefinder({ location }) {
             </h1>
             <div className="max-length">
               The COVID-19 pandemic promoted an uprecedented change in
-              consumption habits due to the lockdowns causing an increase in
-              online shopping and delivery services. As convenient as it may
-              sound for the regular person, the overuse of e-commerce services
-              is one of the major contributors to plastic pollution due to
-              excess packaging being thrown away in huge landfills instead of
-              being repurposed.
+              consumption habits due to lockdowns, causing a steep rise in the
+              e-commerce sector. As convenient as it may sound for the regular
+              consumer, the overuse of e-commerce services is one of the major
+              contributors to plastic pollution due to excess packaging being
+              thrown away in huge landfills instead of being repurposed.
             </div>
           </div>
           <div style={{ marginTop: "50px" }}>
             <h3 className="subtitle">Goal</h3>
             <h1 className="statement">
               Design a better checkout experience focused on minimizing waste.
+              {/* Create an e-commerce platform selling sustainable packaging aimed
+              towards businesses. */}
             </h1>
           </div>
         </div>
@@ -193,7 +172,9 @@ export default function Racefinder({ location }) {
             “
           </div>
           <div className="quote max-length">
-            How can we make buyers adopt a sustainable shopping mindset?
+            How can we make buyers adopt a more sustainable mindset?
+            {/* How can we make businesses sell products in an
+            environmentally-friendly manner? */}
           </div>
           <div className="quote-mark" style={{ textAlign: "right" }}>
             ”
@@ -210,133 +191,67 @@ export default function Racefinder({ location }) {
       <section className="section" style={{ background: "white" }}>
         <h1 id="research">Research</h1>
         <div>
-          <h2>Gaining insights from runners</h2>
+          <h2>User survey</h2>
           <div className="max-length">
-            As much as I would have loved to solve one of my personal
-            frustrations, the first thing that needed to be done was to find out
-            if I'm the only one experiencing the same struggles or there are
-            others out there resonating with me. Prior to the interviews, I made
-            sure the people I talked to are engaging in physical activities
-            regularly and like participating in competitive events.
-            <h1 className="statement">
-              Most people agreed that the race-booking process is longer than
-              necessary.
-            </h1>
-            This thing alone gave me the green light to carry on with my
-            research.
-          </div>
-        </div>
-      </section>
-      <section className="survey">
-        <Img
-          fluid={data.survey.childImageSharp.fluid}
-          style={{ margin: "0 auto" }}
-        />
-      </section>
-      <section className="section">
-        <h1>Findings</h1>
-        <div>
-          <p>
-            Pain points when trying to register for a race:
+            I started the design process by collecting information from people
+            around me regarding their online shopping habits. In order to
+            collect as many answers as possible, I used an online survey with
+            various questions on the topic of online shopping, to identify how
+            informed they are with regards to sustainability and the negative
+            impact over-shopping can have on the environment. 25 persons
+            completed the the survey.
+            <Img
+              fluid={data.surveyResults.childImageSharp.fluid}
+              style={{ margin: "60px auto" }}
+            />
+            <p>Key mentions in the user survey:</p>
             <ul>
               <li>
-                information is <b>spread all over</b> the internet
+                People have acknowledged they started{" "}
+                <b>ordering more items online</b> and admitted to{" "}
+                <b>throwing away most of the boxes.</b>
               </li>
               <li>
-                it's <b>tricky</b> to find all the details about one race on a
-                single page
+                <b>Overpacking</b> is also a common issue among many shoppers as
+                they often get sent packages that are too big for what they
+                ordered.
               </li>
               <li>
-                the racebooking process never gets easier, it's always{" "}
-                <b>time-consuming</b>
-              </li>
-              <li>
-                <b>no mobile app</b> developed in this direction
-              </li>
-              <li>
-                race calendars are <b>not exactly focused on running</b>, they
-                usually cover more types of sports like swimming or cycling
-              </li>
-              <li>
-                <b>limited filtering functionality</b> - no attributes such as
-                distance, difficulty or proximity exist
+                {" "}
+                Most of the e-commerce websites have{" "}
+                <b>not taken the appropriate measures</b> to reduce single-use
+                packaging yet, even though customers would be open to the idea.
               </li>
             </ul>
-          </p>
-          <h2>Secondary research</h2>
-          <div>
-            After conducting{" "}
-            <a
-              href="https://pubmed.ncbi.nlm.nih.gov/32230999/"
-              style={{ color: colors.medium }}
-            >
-              secondary research
-            </a>
-            , I identified four types of runners which would serve as my target
-            audience:
-            <ul className="types">
-              <li className="type">
-                <div className="icon" style={{ background: colors.dark }}>
-                  <img src={runnerType1} alt="icon" width={80} height={80} />
-                </div>
-                <div className="icon-description">
-                  <b>Individual casual runners</b>
-                  <span>
-                    People for whom running is not a main sport who usually run
-                    5km or 10km and rarely participate in competitions
-                  </span>
-                </div>
-              </li>
-              <li className="type">
-                <div className="icon" style={{ background: colors.dark }}>
-                  <img src={runnerType2} alt="icon" width={80} height={80} />
-                </div>
-                <div className="icon-description">
-                  <b>Individual competitive runners</b>
-                  <span>
-                    People who train very frequently and who participate in 5 or
-                    more events annually
-                  </span>
-                </div>
-              </li>
-              <li className="type">
-                <div className="icon" style={{ background: colors.dark }}>
-                  <img src={runnerType3} alt="icon" width={80} height={80} />
-                </div>
-                <div className="icon-description">
-                  <b>Social competitive runners</b>
-                  <span>
-                    People who run with friends, colleagues, small groups or
-                    clubs and participate in fewer events
-                  </span>
-                </div>
-              </li>
-              <li className="type">
-                <div className="icon" style={{ background: colors.dark }}>
-                  <img src={runnerType4} alt="icon" width={80} height={80} />
-                </div>
-                <div className="icon-description">
-                  <b>Devoted runners</b>
-                  <span>
-                    Experienced runners with more time at their disposal who
-                    engage in longer distances and participate in 5 or more
-                    events annually{" "}
-                  </span>
-                </div>
-              </li>
-            </ul>
+            <h1 className="statement">
+              One of the greatest concerns regarding single-use packaging and
+              its harmful effects on the environment is people's lack of
+              knowledge on the topic.{" "}
+            </h1>
+            <p>
+              Most subjects have stated that even though they are aware online
+              shopping is bad for the environment, they are unaware{" "}
+              <i>how bad</i> it actually is and where does packaging waste end
+              up.
+            </p>
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" style={{ background: colors.light }}>
         <h1>Personas</h1>
         <div style={{ width: "100%", margin: "0" }}>
-          <h2 style={{ margin: "0 12vw 1vw 6vw" }}>Defining users</h2>
+          <h2 style={{ margin: "0 12vw 1vw 6vw" }}>Defining online buyers</h2>
           <p style={{ margin: "0 12vw 0 6vw" }}>
             After researching, I created two personas that best shape the
             potential users of this app, along with their needs and
-            frustrations. Throughout the rest of the design process, I focused
-            on solving their problems and come up with improvements.
+            frustrations. I concentrated on two types of users:
+            <ul>
+              <li>online orders consumers</li>
+              <li>e-commerce business owners</li>
+            </ul>
+            Throughout the rest of the design process, I focused on solving
+            their problems and come up with an improved checkout concept when
+            shopping online for an item, that would benefit both user segments.
           </p>
           <Carousel
             enableKeyboardControls
@@ -360,104 +275,119 @@ export default function Racefinder({ location }) {
           </Carousel>
         </div>
       </section>
-      <section className="wireframes">
-        <div className="full-screen-text">
-          <h2>Brainstorming possible solutions</h2>
-          <p>
-            Having a rough idea of how the app would look, I started sketching
-            some initial ideas on paper. The central element of this app is a{" "}
-            <b>street map</b> with pinpoints indicating where future races will
-            be taking place. The <b>search filters</b> are equally important --
-            since they are the ones that were lacking in the current event
-            discovery apps. Additional features that I included were: the
-            ability to switch between map view and <b>expandable cards</b> and a
-            page dedicated to <b>race history</b>.
-          </p>
-          <p>
-            I showed the wireframes to a handful of people to get their opinion
-            on it and updated the design accordingly in the next iteration
-            (mid-fidelity prototype).
-          </p>
-        </div>
-        <div style={{ margin: "100px 0" }}>
-          <h1 style={{ textAlign: "center" }}>Low-fidelity prototype</h1>
-          <div className="low-fidelity">
+      <section className="section" style={{ background: "white" }}>
+        <h1>Ideate</h1>
+        <div>
+          <div className="max-length">
+            <h2>How does a checkout flow look like?</h2>
+            <p>
+              I continued by researching the structure of a typical checkout
+              experience on mobile when purchasing items online. Most e-commerce
+              apps have 6 checkout screens, as depicted in the following image
+              (courtesy of{" "}
+              <a
+                href="https://bsscommerce.com/blog/one-step-checkout-facts-statistics/"
+                style={{ color: colors.medium }}
+                target="_blank"
+              >
+                BSS Commerce
+              </a>
+              ) :
+            </p>
+            <Img
+              fluid={data.checkoutFlow.childImageSharp.fluid}
+              style={{ margin: "0 auto" }}
+            />
+            <h2 style={{ marginTop: "60px" }}>Initial sketches</h2>
+            <p>
+              I had an idea in mind on how to design the checkout flow, which I
+              sketched on paper. My main goal was to create a customizable
+              experience for the users where they decide what options suit them
+              best in terms of delivery and packaging, while{" "}
+              <b>making them aware of the environmental consequences.</b>
+            </p>
             <Img
               fluid={data.wireframe1.childImageSharp.fluid}
               style={{ filter: "grayscale(100%)", margin: "0 auto" }}
             />
-            <Img
-              fluid={data.wireframe2.childImageSharp.fluid}
-              style={{ filter: "grayscale(100%)", margin: "0 auto" }}
-            />
+            <h1 className="statement">A little goes a long way.</h1>
+            <p>
+              That's the principle upon which I redesigned the e-commerce
+              checkout experience for improving sustainability. I tried making
+              customers <i>aware</i> of environmental risks associated to their
+              shopping choices by <b>embedding small snippets of information</b>{" "}
+              associated to ecological waste. Besides educating online shoppers
+              on sustainability, I also came up with a <b>reward system</b> that
+              grants customers discounts if they choose the greener options for
+              their delivery.
+            </p>
+            <h1 className="statement">
+              Informational rewards satiate a user's curiosity.
+            </h1>
+            <p>
+              The reward system I came up with consists of "eco points" that the
+              buyer receives whenever he opts for a planet-friendly option for
+              delivery or packaging. As advertised in the banner (first screen -
+              bottom), eco points can be used to get discounts in the next
+              order.
+            </p>
           </div>
         </div>
+      </section>
+      <section className="wireframes">
         <div className="full-screen-text">
           <p>
-            Most of the layout was kept with a few changes:
+            The checkout experience consists of 6 screens, namely:
             <ul style={{ marginBottom: "60px" }}>
               <li style={{ marginBottom: "10px" }}>
-                <i>Continue without login [removed]</i> - I initially thought
-                having a "guest mode" available would determine more people to
-                use the app, however after sharing my idea I realized it
-                wouldn't be a very helpful feature. Using an app in guest mode
-                loses your data, while most people want to have access to it.
+                <i>Product page</i> - where the user has the option to read more
+                details about a certain item and add it to cart
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <i>Search filters [adjusted]</i> - The race length and proximity
-                were kept, however "difficulty" was removed due to its ambiguity
-                and subjective meaning. Besides, a new filter was added, namely
-                the start & end date, for being able to set a predefined time
-                span in which to search for races.
+                <i>Cart page</i> - displaying all the items that were added to
+                cart and the subtotal price (excluding the shipping fee)
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <i>Expandable cards [adjusted]</i> - In List view, the plan was
-                to create expandable cards that when expanded,would display
-                additional information about the selected race. There would be a
-                'Register' button that when clicked redirected to the
-                registration form on the race's website. These cards turned into
-                simple, unexpandable (but clickable) cards since the amount of
-                text they contained was too large and the users could easily
-                lose focus. When clicked, the cards are now redirecting to a new
-                page with race details and actions to perform (register or
-                invite friends).
+                <i>Checkout screen I: Shipping</i> - here the user adds the home
+                address and picks a delivery option (either expedited or
+                standard, being informed by the app that standard delivery is
+                more sustainable); if ground shipping is selected, the user gets
+                eco points
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <i>Logo [moved]</i> - the logo was ultimately moved on top of
-                the page, as it would overlap with the navigation menu on
-                bottom.
+                <i>Checkout screen II: Packaging</i> - here the user can opt for
+                sustainable packaging or zero packaging, being rewarded with eco
+                points accordingly
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <i>Map/List toggle [moved]</i> - the Map/List radio buttons were
-                also moved on top of the page for the same reasons listed above.
+                <i>Checkout screen III: Payment</i> - here the user can add
+                payment information and confirm payment for the order
+              </li>
+              <li style={{ marginBottom: "10px" }}>
+                <i>Checkout screen IV: Confirmation</i> - screen notifying the
+                user that the order was successfully submitted
               </li>
             </ul>
           </p>
         </div>
         <div className="mid-fidelity" style={{ background: colors.light }}>
           <h1 style={{ marginBottom: "40px" }}>Mid-fidelity prototype</h1>
-          <Img fluid={data.midFidelity.childImageSharp.fluid} />
+          <Img
+            fluid={data.midFidelity.childImageSharp.fluid}
+            style={{ margin: "0 auto" }}
+          />
         </div>
         <div className="high-fidelity" style={{ background: colors.dark }}>
           <h1 style={{ margin: 0 }}>High-fidelity prototype</h1>
-          <p className="subtitle">Sign-up flow</p>
           <Img
-            fluid={data.signUpFlow.childImageSharp.fluid}
+            fluid={data.highFidelity.childImageSharp.fluid}
             style={{ margin: "0 auto" }}
           />
-          <p className="subtitle">Onboarding</p>
+        </div>{" "}
+        <div className="mid-fidelity">
+          <h1 style={{ marginBottom: "40px" }}>Design system</h1>
           <Img
-            fluid={data.onboarding.childImageSharp.fluid}
-            style={{ margin: "0 auto" }}
-          />
-          <p className="subtitle">Profile page & previous races</p>
-          <Img
-            fluid={data.profileAndHistory.childImageSharp.fluid}
-            style={{ margin: "0 auto" }}
-          />
-          <p className="subtitle">Filter races, register & send invitations</p>
-          <Img
-            fluid={data.map.childImageSharp.fluid}
+            fluid={data.designSystem.childImageSharp.fluid}
             style={{ margin: "0 auto" }}
           />
         </div>
@@ -465,36 +395,30 @@ export default function Racefinder({ location }) {
       <section className="section" style={{ background: "white" }}>
         <h1>User testing</h1>
         <div>
-          <h2>Identifying bottlenecks</h2>
+          <h2>Validating assumptions</h2>
           <div className="max-length">
             After creating the high-fidelity prototpe, I conducted usability
-            testing with four participants (three in person and one online via
-            screen-sharing). My main goal was to detect whether the participants
-            found the app intuitive and were able to perform tasks without extra
-            help needed, so I came up with a series of tasks that best described
-            the purpose of the app and observed how the people interacted with
-            the prototype. Tasks included looking for a race with custom
-            parameters, sending an invitation, register for a race and access
-            the previous races. Overall, the testing went very well and the
-            users completed the tasks easily. Except for a few minor things.
-            <Img
-              fluid={data.usabilityTest.childImageSharp.fluid}
-              style={{ margin: "20px auto" }}
-            />
-            <h1 className="statement">
-              Participants had the tendency to zoom in the map.
-            </h1>
-            However this feature was not supported at the moment. They also
-            wished to see their current location on the map, along with the
-            pinpoints. Regarding the invitations, there was no way to tell what
-            people you previously invited to a race, so having that in plain
-            sight would have also been helpful.
+            testing with five participants (face to face). My main goal was to
+            detect whether the participants found the eco-points rewarding
+            system powerful and if they learnt new things about sustainable
+            shopping while navigating through the checkout screens. There were
+            no tasks prepared and during the interviews I payed close attention
+            to the participants' reactions when they interacted with the
+            checkout screens. The participants were asked to think out loud. On
+            the whole, the prototype met its purpose, but it also generated a
+            few concerns, as detailed in the feedback grid below.
           </div>
         </div>
       </section>
+      <div className="mid-fidelity" style={{ background: colors.dark }}>
+        <Img
+          fluid={data.feedback.childImageSharp.fluid}
+          style={{ margin: "0 auto" }}
+        />
+      </div>
       <div
         className="mid-fidelity"
-        style={{ background: "#f0f0f0", padding: "4rem 6vw" }}
+        style={{ background: "#e3e3e3", padding: "4rem 6vw" }}
       >
         <h1 style={{ marginBottom: "40px" }}>Revision</h1>
         <Img
@@ -505,35 +429,36 @@ export default function Racefinder({ location }) {
       <section className="section" style={{ background: "white" }}>
         <h1>Reflection</h1>
         <div>
-          This project has been a great opportunity for me to expand my
-          strategic thinking. On the whole, the app met its purpose and could be
-          a significant tool to runners looking for upcoming races. My key
-          learning during the design process was how important it is to ask for
-          user feedback before everything else comes into play.
+          This project allowed me to learn more about UX design in e-commerce.
+          Even though the presented solution is a specific case that cannot be
+          applied to all online stores due to differences in logistics, the
+          central idea stays the same - users should be informed of the
+          environmental impact associated to their online purchases and rewarded
+          with small bonuses where possible.
           <br />
           <br />
-          There are a lot of improvements to be added in future iterations such
-          as:
+          If I were to continue expanding the checkout screens, I would:
           <ul>
-            <li>adding a user's settings page</li>
-            <li>integrating notifications</li>
-            <li>improving the search filters</li>
-            <li>using AI to send personalized recommandations to users</li>
+            <li>
+              add numerical statistics or illustrations instead of textual facts
+              to increase awareness
+            </li>
+            <li>find a way to reduce the number of checkout screens</li>
+            <li>
+              replace the tooltips with fullscreen modals to include more facts
+            </li>
           </ul>
         </div>
       </section>
       <div className="iframe-container">
         <iframe
           style={{
-            border: "none",
-            background: "#fff",
+            border: 0,
           }}
           width="1400"
           height="800"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Flu0VBSCpiFcH1fJCLtOk5l%2FUntitled%3Fnode-id%3D241%253A5949%26scaling%3Dscale-down%26page-id%3D241%253A380%26starting-point-node-id%3D241%253A5949%26hide-ui%3D1"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Flu0VBSCpiFcH1fJCLtOk5l%2FUntitled%3Fnode-id%3D1333%253A1216%26scaling%3Dscale-down%26page-id%3D1257%253A1084%26starting-point-node-id%3D1333%253A1216%26show-proto-sidebar%3D1%26hide-ui%3D1"
           allowfullscreen
-          allowtransparency
-          frameBorder={0}
         ></iframe>
       </div>
       <Footer />

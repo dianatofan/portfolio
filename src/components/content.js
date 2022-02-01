@@ -25,7 +25,7 @@ export default function Content() {
           }
         }
       }
-      sustainability: file(relativePath: { eq: "primevideo.jpeg" }) {
+      sustainability: file(relativePath: { eq: "thumbnail3.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -54,26 +54,25 @@ export default function Content() {
         <h2>Past work</h2>
         <div className="projects-grid">
           <Card
-            title="Optimizing the Racebooking Process"
-            description="Mobile app that helps runners find their next race easier. Prototyped in Figma"
+            title="Racefinder App"
+            description="Optimizing the racebooking process to help runners find their next race easier"
             role="UX/UI DESIGN | USER RESEARCH"
             image={data.racefinder.childImageSharp.fluid}
             url="racefinder"
           />
           <Card
+            title="Sustainable E-Commerce"
+            description="Reimagining the checkout flow to reduce packaging waste in online orders"
+            role="UX/UI DESIGN | USER RESEARCH"
+            image={data.sustainability.childImageSharp.fluid}
+            url="sustainability"
+          />
+          <Card
             title="Visual Exploration of Time Series in Healthcare"
-            description="Web application that generates charts based on input data. Built in React, Redux & D3.js"
+            description="Web application that generates medical charts based on input data. Built in D3.js"
             role="DATA VISUALIZATION | UX/UI DESIGN"
             image={data.timeseries.childImageSharp.fluid}
             url="time-series"
-          />
-          <Card
-            title="Amazon Prime Video Redesign [in progress]"
-            description="Identifying and solving user problems in the current app"
-            role="UX/UI DESIGN | USER RESEARCH"
-            image={data.sustainability.childImageSharp.fluid}
-            url="splitwise"
-            url="prime"
           />
         </div>
       </section>
