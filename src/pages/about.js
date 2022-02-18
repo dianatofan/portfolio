@@ -86,7 +86,7 @@ export default function About({ location }) {
             I'm a UX/UI designer based in Copenhagen who started her journey as a frontend developer.
             I have been building websites for a few years and have
             always been excited about making pixel-perfect apps, however I realized
-            my true love is design, so I took the leap and decided to pursue my greatest passion.
+            my true calling is design, so I took the leap and decided to pursue my passion.
           </p>
           <p>
             In my job as a developer, I have always paid great attention to details
