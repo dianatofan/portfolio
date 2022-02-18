@@ -10,7 +10,7 @@ export default ({ location }) => (
       <iframe
         allowTransparency={true}
         frameBorder={0}
-        src="https://drive.google.com/file/d/1HfLD1kIx7qfiOOs5WX4CnjWrXSnMsZeq/preview"
+        src="https://drive.google.com/file/d/19KlBRcKq3WN-bCSdJV2ueb1uRRPYt4BK/preview"
         width="640"
         height="480"
       />
