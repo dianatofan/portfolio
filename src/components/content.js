@@ -40,7 +40,7 @@ export default function Content() {
     <>
       <div className="content front-page">
         <div className="introText animate__animated animate__fadeIn">
-          <h2>Hey! I'm Diana, a human-centered designer who codes.</h2>
+          <h2>Hey! I'm Diana, a frontend developer UX'er at heart.</h2>
           <h3>I love brainstorming ideas and bringing them to life.</h3>
         </div>
       </div>
