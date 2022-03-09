@@ -40,12 +40,13 @@ export default function Card({
         <Img
           fluid={{ ...image, aspectRatio: 1 }}
           style={{ cursor: "pointer", position: "relative" }}
+          imgStyle={{ transition: "transform 0.5s linear" }}
         />
       </div>
-      <div className={`bottom ${icon ? "slide-down" : ""}`}>
+      <div className="bottom">
         <div className="title">{title}</div>
         <div className="description">{description}</div>
-        <div className="role">{role}</div>
+        {/* <div className="role">{role}</div> */}
       </div>
     </div>
   );

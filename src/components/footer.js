@@ -8,7 +8,7 @@ import email from "../images/logos/email.svg";
 import github from "../images/logos/github.svg";
 import linkedin from "../images/logos/linkedin.svg";
 import strava from "../images/logos/strava.png";
-import twitter from "../images/logos/twitter.svg";
+import dribbble from "../images/logos/dribbble.png";
 
 const WIDTH = 32;
 const HEIGHT = 32;
@@ -44,12 +44,12 @@ export default function Footer() {
         <IconItem
           href="https://github.com/dianatofan"
           src={github}
-          alt="Github"
+          alt="GitHub"
         />
         <IconItem
-          href="https://twitter.com/dianatfn"
-          src={twitter}
-          alt="Twitter"
+          href="https://dribbble.com/dianatofan"
+          src={dribbble}
+          alt="Dribbble"
         />
         <IconItem
           href="https://www.strava.com/athletes/49741647"

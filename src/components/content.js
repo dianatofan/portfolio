@@ -40,7 +40,8 @@ export default function Content() {
     <>
       <div className="content front-page">
         <div className="introText animate__animated animate__fadeIn">
-          <h2>Hey! I'm Diana, a frontend developer UX'er at heart.</h2>
+          {/* <h2>Hey! I'm Diana, a frontend developer UX'er at heart.</h2> */}
+          <h2>Hey! I'm Diana, a digital designer with technical background.</h2>
           <h3>I love brainstorming ideas and bringing them to life.</h3>
         </div>
       </div>
@@ -69,7 +70,7 @@ export default function Content() {
           />
           <Card
             title="Visual Exploration of Time Series in Healthcare"
-            description="Web application that generates medical charts based on input data. Built in D3.js"
+            description="Generate medical charts given patient data"
             role="DATA VISUALIZATION | UX/UI DESIGN"
             image={data.timeseries.childImageSharp.fluid}
             url="time-series"

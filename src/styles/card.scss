@@ -1,14 +1,5 @@
 @import "colors";
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .rectangle {
   color: $black;
   width: 100%;
@@ -18,9 +9,10 @@
 .rectangle .image {
   position: relative;
   cursor: pointer;
-  transition: transform 0.5s linear;
   &:hover {
-    transform: scale(1.05);
+    img {
+      transform: scale(1.1);
+    }
     &:before {
       content: "";
       width: 100%;
@@ -50,7 +42,6 @@
     }
   }
   &.sustainability {
-    background: $white;
     &:hover {
       &:before {
         background: rgba(116, 214, 112, 0.8);
@@ -72,42 +63,17 @@
   opacity: 0.5;
 }
 
-.rectangle .description,
-.rectangle .button {
+.rectangle .description  {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: $text-color;
 }
 
-.rectangle .button {
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.rectangle .button:hover {
-  font-weight: 700;
-}
-
-.rectangle.parallel-coordinates,
-.rectangle.ted-talks {
-  margin: 10px 0 10px 10px;
-}
 
 @media only screen and (max-width: 900px) {
   .rectangle {
     width: 100%;
   }
-}
-
-.right-column.image {
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.right-column.image:hover {
-  background: white;
-  transform: scale(1.05);
 }
 
 .user-types {
@@ -133,11 +99,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.bottom {
-  transition: transform 0.3s linear;
-  &.slide-down {
-    transform: translate(0, 20px) scale(1.05);
-  }
 }

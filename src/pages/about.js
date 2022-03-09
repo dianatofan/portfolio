@@ -83,13 +83,13 @@ export default function About({ location }) {
         <section className="about-me-text">
           <h1>Hi again! I'm Diana Tofan.</h1>
           <p>
-            I'm a frontend developer based in Copenhagen transitioning into product design.
+            I'm a UX/UI designer based in Copenhagen who started as a frontend developer.
             I have been building websites for a few years and have
             always been excited about making pixel-perfect apps, however I realized
-            my true calling is design, so I took the leap and decided to pursue my passion.
+            my true calling is design, so now I'm pursuing my greatest passion.
           </p>
           <p>
-            In my job as a developer, I have always paid great attention to details
+            In my web development job I have always paid great attention to details
             and made sure all the apps I built were accessible, eye-pleasing and
             device agnostic. I am seeking to leverage this experience in the design world to create 
             smooth user flows that abide to industry standards and are feasible to implement from an engineering standpoint.
