@@ -83,19 +83,37 @@ export default function About({ location }) {
         <section className="about-me-text">
           <h1>Hi again! I'm Diana Tofan.</h1>
           <p>
-            I'm a UX/UI designer based in Copenhagen who started as a frontend developer.
-            I have been building websites for a few years and have
-            always been excited about making pixel-perfect apps, however I realized
-            my true calling is design, so now I'm pursuing my greatest passion.
+            I'm a UX/UI designer and developer based in Copenhagen. I have been
+            building websites for a few years and have always been excited about
+            making pixel-perfect apps, as solving complex problems to make
+            people's lives easier is my favorite thing in the world.
           </p>
           <p>
-            In my web development job I have always paid great attention to details
-            and made sure all the apps I built were accessible, eye-pleasing and
-            device agnostic. I am seeking to leverage this experience in the design world to create 
-            smooth user flows that abide to industry standards and are feasible to implement from an engineering standpoint.
+            In my work, I pay great attention to details and make sure all the
+            apps I build are accessible, eye-pleasing and device agnostic. I am
+            seeking to leverage my technical expertise in the design world to
+            create smooth user flows that abide to industry standards and are
+            feasible to implement from an engineering standpoint.
           </p>
-          <p>Nothing makes me happier than puting a smile on
-            users' faces with design ideas that work.</p>
+          {/* <p>
+            I'm a UX/UI designer based in Copenhagen who started as a frontend
+            developer. I have been building websites for a few years and have
+            always been excited about making pixel-perfect apps, however I
+            realized my true calling is design, so now I'm pursuing my greatest
+            passion.
+          </p>
+          <p>
+            In my web development job I have always paid great attention to
+            details and made sure all the apps I built were accessible,
+            eye-pleasing and device agnostic. I am seeking to leverage this
+            experience in the design world to create smooth user flows that
+            abide to industry standards and are feasible to implement from an
+            engineering standpoint.
+          </p> */}
+          {/* <p>
+            Nothing makes me happier than puting a smile on users' faces with
+            design ideas that work.
+          </p> */}
           <p>
             Send me a message if you would like to connect 😄
             <br />
