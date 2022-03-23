@@ -15,10 +15,10 @@ export const Menu = ({ open }) => (
         About
       </Link>
     </a>
-    <a>
+    {/* <a>
       <Link className="animate__animated animate__fadeIn" to="/resume">
         Resume
       </Link>
-    </a>
+    </a> */}
   </nav>
 );

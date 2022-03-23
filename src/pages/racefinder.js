@@ -138,7 +138,7 @@ export default function Racefinder({ location }) {
         <div className="basic-info max-length">
           <div className="duration">
             <div className="headline">Duration</div>
-            <div>6 months</div>
+            <div>2 months</div>
           </div>
           <div className="type">
             <div className="headline">Type</div>
@@ -155,7 +155,9 @@ export default function Racefinder({ location }) {
         <div>
           <div>
             <h3 className="subtitle">Problem</h3>
-            <h1 className="statement">Finding races takes forever.</h1>
+            <h1 className="statement">
+              Finding races leaves much to be desired.
+            </h1>
             <div className="max-length">
               As an amateur runner who signs up for races regularly, I am
               struggling to find an app where I can keep track of the upcoming
