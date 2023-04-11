@@ -1,8 +1,10 @@
-import { navigate } from "gatsby";
-import React, { useState } from "react";
-import Img from "gatsby-image";
-import { Eye, EyeOff } from "react-feather";
 import "../styles/card.scss";
+
+import { Eye, EyeOff } from "react-feather";
+import React, { useState } from "react";
+
+import Img from "gatsby-image";
+import { navigate } from "gatsby";
 
 export default function Card({
   image,
@@ -21,7 +23,7 @@ export default function Card({
         onMouseOver={() => showIcon(true)}
         onMouseLeave={() => showIcon(false)}
       >
-        {icon &&
+        {/* {icon &&
           (inProgress ? (
             <EyeOff
               className="animate__animated animate__fadeIn eye-icon"
@@ -36,10 +38,14 @@ export default function Card({
               width={80}
               height={80}
             />
-          ))}
+          ))} */}
         <Img
-          fluid={{ ...image, aspectRatio: 1 }}
-          style={{ cursor: "pointer", position: "relative" }}
+          fluid={{ ...image }}
+          style={{
+            cursor: "pointer",
+            position: "relative",
+            borderRadius: "16px",
+          }}
           imgStyle={{ transition: "transform 0.5s linear" }}
         />
       </div>

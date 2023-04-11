@@ -2,11 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 .about-me-page {
+  max-width: 70vw;
+  margin: 8rem auto 6rem auto;
   &.content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start;
+    gap: 48px;
+    color: $text-color;
   }
 }
 
@@ -16,7 +19,6 @@
 }
 
 .about-me-text {
-  color: $text-color;
   text-align: left;
   font-size: 1.2rem;
   line-height: 30px;
@@ -30,7 +32,9 @@
   }
 
   > h1 {
-    line-height: 30px;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    // line-height: 30px;
   }
 }
 
@@ -46,6 +50,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6%;
+  margin-bottom: 100px;
 
   div {
     width: calc(200px + 8vw);
@@ -97,4 +102,17 @@ section {
 
 .instaPics {
   margin-bottom: 60px;
+  max-width: 70vw;
+  margin: 0 auto;
+  h2 {
+    color: black;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .about-me-page {
+    max-width: 50vw;
+  }
 }

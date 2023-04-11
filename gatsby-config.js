@@ -33,7 +33,7 @@ module.exports = {
         short_name: "logo",
         start_url: "/",
         display: "standalone",
-        icon: "src/images/logos/g12.svg",
+        icon: "src/images/logos/logoNew.svg",
       },
     },
     {

@@ -1,13 +1,14 @@
-import React from "react";
 import "../../styles/header/menu.scss";
-import { Link } from "gatsby";
 import "animate.css";
+
+import { Link } from "gatsby";
+import React from "react";
 
 export const Menu = ({ open }) => (
   <nav className={open ? "open" : "hidden"}>
     <a>
       <Link className="animate__animated animate__fadeIn" to="/">
-        Home
+        Projects
       </Link>
     </a>
     <a>

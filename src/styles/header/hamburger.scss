@@ -8,13 +8,13 @@
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
-    height: 2rem;
+    height: 1.6rem;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     z-index: 10;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.1);
@@ -22,11 +22,11 @@
 
     div {
       width: 2rem;
-      height: 0.25rem;
+      height: 0.15rem;
       border-radius: 10px;
       transition: all 0.3s linear;
       position: relative;
-      transform-origin: 1px;
+      transform-origin: 4px;
       background: $text-color;
     }
 
@@ -34,14 +34,17 @@
       :first-child {
         background: $white;
         transform: rotate(45deg);
+        height: 0.12rem;
       }
       :nth-child(2) {
         opacity: 0;
         transform: translateX(20px);
+        height: 0.12rem;
       }
       :nth-child(3) {
         background: $white;
         transform: rotate(-45deg);
+        height: 0.12rem;
       }
     }
 

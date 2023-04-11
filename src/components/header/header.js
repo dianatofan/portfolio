@@ -1,10 +1,13 @@
-import React, { useState } from "react";
 import "../../styles/header/header.scss";
-import { Menu as MenuIcon, X } from "react-feather";
+import "animate.css";
+
 import { Link, navigate } from "gatsby";
-import logo from "../../images/logos/g12.svg";
+import { Menu as MenuIcon, X } from "react-feather";
+import React, { useState } from "react";
+
 import { Burger } from "./hamburger";
 import { Menu } from "./menu";
+import logo from "../../images/logos/logoNew.svg";
 
 export default ({ location }) => {
   const [isOpen, setOpen] = useState(false);
@@ -12,7 +15,7 @@ export default ({ location }) => {
   const activePage = location?.pathname;
 
   return (
-    <header className="header sticky" id="header">
+    <header className="header animate__animated animate__fadeIn" id="header">
       <div>
         <img
           src={logo}
@@ -22,7 +25,7 @@ export default ({ location }) => {
         />
         <ul className="navigation">
           <li className={activePage === "/" ? "active" : ""}>
-            <Link to="/">Home</Link>
+            <Link to="/">Projects</Link>
           </li>
           <li
             className={

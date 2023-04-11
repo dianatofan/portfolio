@@ -1,12 +1,11 @@
 import "typeface-metropolis";
-import React from "react";
-import Helmet from "react-helmet";
 import "animate.css";
+import "../styles/index.scss";
 
 import Content from "../components/content";
+import Helmet from "react-helmet";
 import Layout from "../components/layout";
-
-import "../styles/index.scss";
+import React from "react";
 
 export default function App({ location }) {
   const meta = [{ name: "robots", content: "noindex" }];

@@ -1,16 +1,16 @@
+import "../styles/about.scss";
+
 import { graphql, useStaticQuery } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
 
 import Layout from "../components/layout";
 import Polaroid from "../components/polaroid";
-
-import "../styles/about.scss";
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function About({ location }) {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "aboutmepic.png" }) {
+      image: file(relativePath: { eq: "me.png" }) {
         childImageSharp {
           fixed(width: 550, height: 620, quality: 100) {
             ...GatsbyImageSharpFixed
@@ -73,46 +73,52 @@ export default function About({ location }) {
     <Layout location={location}>
       <div className="about-me-page content animate__animated animate__fadeIn">
         <StaticImage
-          src="../images/aboutmepic.png"
+          src="../images/me.png"
           alt="Picture with me"
           placeholder="blurred"
           layout="constrained"
           width={500}
           height={660}
+          style={{ borderRadius: "16px" }}
         />
-        <section className="about-me-text">
-          <h1>Hi again! I'm Diana Tofan.</h1>
+        <div className="about-me-text">
+          <h1>
+            Hi, I'm Diana, a passionate UX designer with background in frontend
+            development.
+          </h1>
+          {/* I currently work as a UX engineer at Google, where I build
+          high-fidelity prototypes for travellers. */}
           <p>
-            I'm a UX/UI designer and developer based in Copenhagen. I have been
-            building websites for a few years and have always been excited about
-            making pixel-perfect apps, as solving complex problems to make
-            people's lives easier is my favorite thing in the world.
+            With a foundation in frontend development, I've always had a keen
+            interest in how users perceive and interact with web interfaces.
+            This curiosity led me to transition from frontend development to UX
+            design, where I've been able to combine my technical skills with my
+            creativity to craft meaningful, user-centered solutions.
           </p>
           <p>
-            In my work, I pay great attention to details and make sure all the
-            apps I build are accessible, eye-pleasing and device agnostic. I am
-            seeking to leverage my technical expertise in the design world to
-            create smooth user flows that abide to industry standards and are
-            feasible to implement from an engineering standpoint.
+            Through my experience, I gained a deep understanding of how to build
+            pixel-perfect, responsive applications in HTML, CSS and Javascript,
+            while always being particularly drawn to the human side of
+            technology.
+          </p>
+          <p>
+            Currently, I work as a UX engineer at Google, where I build
+            high-fidelity prototypes for travellers and perform large-scale user
+            studies that validate early concepts and explore new ideas.
           </p>
           {/* <p>
-            I'm a UX/UI designer based in Copenhagen who started as a frontend
-            developer. I have been building websites for a few years and have
-            always been excited about making pixel-perfect apps, however I
-            realized my true calling is design, so now I'm pursuing my greatest
-            passion.
+            My career as a designer had a rocky start, as I found myself in a
+            fullstack developer job I didn't enjoy. That motivated me to take
+            action and work towards my biggest dream: become a designer. Ever
+            since I've been working as a designer, my happiness level
+            skyrocketed and seeing my ideas come to life is extremely fulfiling.
           </p>
           <p>
-            In my web development job I have always paid great attention to
-            details and made sure all the apps I built were accessible,
-            eye-pleasing and device agnostic. I am seeking to leverage this
-            experience in the design world to create smooth user flows that
-            abide to industry standards and are feasible to implement from an
-            engineering standpoint.
-          </p> */}
-          {/* <p>
-            Nothing makes me happier than puting a smile on users' faces with
-            design ideas that work.
+            I have been working in many different industries and
+            cross-functional teams over time, making sure that wherever I was
+            all the features I delivered were accessible, eye-pleasing and
+            device agnostic. Nothing brings me greater joy than puting a smile
+            on users' faces with design ideas that work.
           </p> */}
           <p>
             Send me a message if you would like to connect 😄
@@ -132,7 +138,7 @@ export default function About({ location }) {
               Linkedin
             </a>
           </p>
-        </section>
+        </div>
       </div>
       <section className="instaPics animate__animated animate__fadeIn animate__delay-1s">
         <h2>When I'm not in front of the computer, I...</h2>

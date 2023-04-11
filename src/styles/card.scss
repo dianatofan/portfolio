@@ -1,14 +1,16 @@
 @import "colors";
+@import "fonts";
 
 .rectangle {
   color: $black;
   width: 100%;
-  max-width: 500px;
+  // max-width: 100%;
 }
 
 .rectangle .image {
   position: relative;
   cursor: pointer;
+  border-radius: 16px;
   &:hover {
     img {
       transform: scale(1.1);
@@ -27,33 +29,20 @@
       background-color: transparent;
     }
   }
-  &.racefinder {
-    &:hover {
-      &:before {
-        background: rgb(0, 123, 255, 0.8);
-      }
-    }
-  }
-  &.time-series {
-    &:hover {
-      &:before {
-        background: rgb(159, 68, 255, 0.8);
-      }
-    }
-  }
-  &.sustainability {
-    &:hover {
-      &:before {
-        background: rgba(116, 214, 112, 0.8);
-      }
-    }
+  &:hover {
+    // &:before {
+    //   background: rgb(0, 0, 0, 0.4);
+    // }
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+        16 0,
+      auto; /*!emojicursor.app*/
   }
 }
 
 .rectangle .title {
-  margin: 20px 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+  margin: 20px 0 0px 0;
+  font-size: var(--font-size-md);
+  font-weight: 600;
 }
 
 .rectangle .role {
@@ -63,12 +52,12 @@
   opacity: 0.5;
 }
 
-.rectangle .description  {
-  font-size: 1.2rem;
+.rectangle .description {
+  // font-size: 1.2rem;
+  font-size: var(--font-size-base);
   margin-bottom: 30px;
   color: $text-color;
 }
-
 
 @media only screen and (max-width: 900px) {
   .rectangle {
