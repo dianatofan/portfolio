@@ -2,6 +2,7 @@ import "../styles/about.scss";
 
 import { graphql, useStaticQuery } from "gatsby";
 
+import Img from "gatsby-image";
 import Layout from "../components/layout";
 import Polaroid from "../components/polaroid";
 import React from "react";
@@ -10,10 +11,10 @@ import { StaticImage } from "gatsby-plugin-image";
 export default function About({ location }) {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "me.png" }) {
+      image: file(relativePath: { eq: "me.jpg" }) {
         childImageSharp {
-          fixed(width: 550, height: 620, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 520, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -31,7 +32,7 @@ export default function About({ location }) {
           }
         }
       }
-      sunset: file(relativePath: { eq: "cph.jpeg" }) {
+      sunset: file(relativePath: { eq: "sunset.png" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -52,14 +53,14 @@ export default function About({ location }) {
           }
         }
       }
-      butterflies: file(relativePath: { eq: "butterflies.jpeg" }) {
+      butterflies: file(relativePath: { eq: "museum.png" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      architecture: file(relativePath: { eq: "architecture.jpg" }) {
+      architecture: file(relativePath: { eq: "architecture.png" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -72,22 +73,26 @@ export default function About({ location }) {
   return (
     <Layout location={location}>
       <div className="about-me-page content animate__animated animate__fadeIn">
-        <StaticImage
-          src="../images/me.png"
+        {/* <StaticImage
+          src="../images/me.JPG"
           alt="Picture with me"
           placeholder="blurred"
           layout="constrained"
-          width={500}
+          width={520}
           height={660}
           style={{ borderRadius: "16px" }}
+        /> */}
+
+        <Img
+          fluid={data.image.childImageSharp.fluid}
+          style={{ borderRadius: "16px" }}
         />
+
         <div className="about-me-text">
           <h1>
             Hi, I'm Diana, a passionate UX designer with background in frontend
             development.
           </h1>
-          {/* I currently work as a UX engineer at Google, where I build
-          high-fidelity prototypes for travellers. */}
           <p>
             With a foundation in frontend development, I've always had a keen
             interest in how users perceive and interact with web interfaces.
@@ -97,14 +102,13 @@ export default function About({ location }) {
           </p>
           <p>
             Through my experience, I gained a deep understanding of how to build
-            pixel-perfect, responsive applications in HTML, CSS and Javascript,
-            while always being particularly drawn to the human side of
-            technology.
+            pixel-perfect, responsive applications, while being particularly
+            drawn to the human side of technology.
           </p>
           <p>
             Currently, I work as a UX engineer at Google, where I build
-            high-fidelity prototypes for travellers and perform large-scale user
-            studies that validate early concepts and explore new ideas.
+            high-fidelity prototypes for travellers to validate concepts and
+            explore ideas.
           </p>
           {/* <p>
             My career as a designer had a rocky start, as I found myself in a
@@ -121,7 +125,8 @@ export default function About({ location }) {
             on users' faces with design ideas that work.
           </p> */}
           <p>
-            Send me a message if you would like to connect 😄
+            Send me a message if you would like to connect, I love meeting new
+            people! 😄
             <br />
             <a
               href="mailto:dianatofan.dt@gmail.com?Subject=Hello"

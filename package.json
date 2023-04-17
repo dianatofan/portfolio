@@ -20,6 +20,7 @@
     "@react-three/drei": "^9.41.2",
     "@react-three/fiber": "^8.9.1",
     "animate.css": "^4.1.1",
+    "flubber": "^0.4.2",
     "framer-motion": "^7.6.9",
     "gatsby": "^4.5.2",
     "gatsby-image": "^3.11.0",

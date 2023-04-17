@@ -3,13 +3,16 @@
 
 .about-me-page {
   max-width: 70vw;
-  margin: 8rem auto 6rem auto;
+  margin: 14rem auto 6rem auto;
   &.content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 48px;
     color: $text-color;
+    .gatsby-image-wrapper {
+      flex: 1;
+    }
   }
 }
 
@@ -25,7 +28,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 56%;
 
   > div {
     margin: 1rem 0;
@@ -62,16 +65,29 @@ section {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1595px) {
   .about-me-page {
     &.content {
-      flex-direction: column;
-      height: auto;
-      margin-top: 60px;
+      display: block;
+      .gatsby-image-wrapper {
+        width: 60%;
+        margin: 0 auto;
+      }
     }
   }
   .about-me-text {
     width: 100%;
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-me-page {
+    &.content {
+      .gatsby-image-wrapper {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -106,7 +122,7 @@ section {
   margin: 0 auto;
   h2 {
     color: black;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     font-weight: 600;
   }
 }

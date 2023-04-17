@@ -1,7 +1,7 @@
 import "../styles/card.scss";
 
-import { Eye, EyeOff } from "react-feather";
 import React, { useState } from "react";
+import { getIndex, useFlubber } from "../hooks/use-flubber";
 
 import Img from "gatsby-image";
 import { navigate } from "gatsby";
@@ -23,22 +23,6 @@ export default function Card({
         onMouseOver={() => showIcon(true)}
         onMouseLeave={() => showIcon(false)}
       >
-        {/* {icon &&
-          (inProgress ? (
-            <EyeOff
-              className="animate__animated animate__fadeIn eye-icon"
-              strokeWidth={1}
-              width={80}
-              height={80}
-            />
-          ) : (
-            <Eye
-              className="animate__animated animate__fadeIn eye-icon"
-              strokeWidth={1}
-              width={80}
-              height={80}
-            />
-          ))} */}
         <Img
           fluid={{ ...image }}
           style={{
@@ -52,7 +36,6 @@ export default function Card({
       <div className="bottom">
         <div className="title">{title}</div>
         <div className="description">{description}</div>
-        {/* <div className="role">{role}</div> */}
       </div>
     </div>
   );
