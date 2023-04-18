@@ -25,7 +25,7 @@ export default function About({ location }) {
           }
         }
       }
-      running: file(relativePath: { eq: "running.png" }) {
+      running: file(relativePath: { eq: "ride.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -150,7 +150,7 @@ export default function About({ location }) {
         <div className="picsGrid">
           <Polaroid
             image={data.running.childImageSharp.fluid}
-            caption="go for a run"
+            caption="go for a ride"
           />
           <Polaroid
             image={data.mountain.childImageSharp.fluid}
