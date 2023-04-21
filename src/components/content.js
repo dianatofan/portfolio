@@ -42,6 +42,14 @@ export default function Content() {
 
   const data = useStaticQuery(graphql`
     query {
+      famly: file(relativePath: { eq: "famly.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 700, maxHeight: 520, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
       racefinder: file(relativePath: { eq: "thumbnail1.png" }) {
         childImageSharp {
           fluid(maxWidth: 700, maxHeight: 520, quality: 100) {
@@ -84,6 +92,13 @@ export default function Content() {
         </AnimationOnScroll>
         <section className="past-work animate__animated animate__fadeIn animate__delay-1s">
           <div className="projects-grid">
+            <Card
+              title="Famly's Redesign"
+              description="Shaping a design system for a mature product"
+              role="UX/UI DESIGN | USER RESEARCH"
+              image={data.famly.childImageSharp.fluid}
+              url="famly"
+            />
             <Card
               title="Racefinder App"
               description="Optimizing the racebooking process to help runners find their next race easier"
