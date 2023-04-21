@@ -36,14 +36,14 @@ module.exports = {
         icon: "src/images/logos/logoNew.svg",
       },
     },
-    {
-      resolve: "@mkitio/gatsby-theme-password-protect",
-      options: {
-        password: "lalala",
-        pagePaths: ["/racefinder", "/about", "/resume"],
-        partialMatching: true,
-      },
-    },
+    // {
+    //   resolve: "@mkitio/gatsby-theme-password-protect",
+    //   options: {
+    //     password: "lalala",
+    //     pagePaths: ["/racefinder", "/about", "/resume"],
+    //     partialMatching: true,
+    //   },
+    // },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
