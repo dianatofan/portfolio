@@ -42,6 +42,14 @@ export default function Content() {
 
   const data = useStaticQuery(graphql`
     query {
+      explore: file(relativePath: { eq: "thumbnail5.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 700, maxHeight: 520, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
       famly: file(relativePath: { eq: "famly.png" }) {
         childImageSharp {
           fluid(maxWidth: 700, maxHeight: 520, quality: 100) {
@@ -92,6 +100,13 @@ export default function Content() {
         </AnimationOnScroll>
         <section className="past-work animate__animated animate__fadeIn animate__delay-1s">
           <div className="projects-grid">
+            <Card
+              title="An Enhanced Travel Experience"
+              description="Making Google Search the most loved tool for travellers"
+              role="UX/UI DESIGN"
+              image={data.explore.childImageSharp.fluid}
+              url="explore"
+            />
             <Card
               title="Famly's Redesign"
               description="Shaping a design system for a mature product"
